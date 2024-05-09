@@ -1,13 +1,13 @@
 {
-  "name": "exchange-web-angular",
+  "name": "richillcapital-exchange-web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:ssr": "node dist/exchange-web-angular/server/server.mjs",
+    "dev": "ng serve --configuration development --port 9996 --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:exchange-web-angular": "node dist/exchange-web-angular/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
