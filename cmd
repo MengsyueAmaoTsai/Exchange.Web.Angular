@@ -2,7 +2,7 @@
 
 IMAGE_NAME=exchange-web:latest
 SERVICE_PORT=9996
-CONTAINER_PORT=4200
+CONTAINER_PORT=4000
 SERVICE_NAME=exchange-web
 
 case $1 in

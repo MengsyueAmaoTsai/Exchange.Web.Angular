@@ -16,4 +16,4 @@ COPY --from=build /app/dist ./dist
 RUN npm install -g pnpm && pnpm i --prod
 
 EXPOSE 4000
-ENTRYPOINT [ "pnpm", "start:ssr" ]
+ENTRYPOINT [ "pnpm", "start" ]
