@@ -1,19 +1,25 @@
-FROM node:21-alpine AS build
+ARG NODE_VERSION=22-alpine
+
+FROM node:${NODE_VERSION} AS build
 WORKDIR /app
 
+# Install Dependencies
 COPY package.json pnpm-lock.yaml ./
-RUN npm install -g pnpm && pnpm i
+RUN npm install -g pnpm && \
+  pnpm i
 
+# Build for Production
 COPY . .
 RUN pnpm run build
 
-FROM node:21-alpine AS production
+FROM node:${NODE_VERSION} AS production
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
 COPY --from=build /app/dist ./dist
 
-RUN npm install -g pnpm && pnpm i --prod
+RUN npm install -g pnpm && \
+  pnpm i --prod
 
 EXPOSE 4000
 ENTRYPOINT [ "pnpm", "start" ]
