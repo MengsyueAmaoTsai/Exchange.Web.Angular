@@ -16,10 +16,10 @@ FROM node:${NODE_VERSION} AS production
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml ./
-COPY --from=build /app/dist ./dist
+COPY --from=build /app/dist ./
 
 RUN npm install -g pnpm && \
   pnpm i --prod
 
 EXPOSE 4000
-ENTRYPOINT [ "pnpm", "start" ]
+ENTRYPOINT [ "node", "richillcapital-exchange-web/server/server.mjs" ]
