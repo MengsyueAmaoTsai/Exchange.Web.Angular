@@ -1,6 +1,13 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { bootstrapApplication } from "@angular/platform-browser";
+import {
+	allComponents,
+	provideFluentDesignSystem,
+} from "@fluentui/web-components";
+import { AppComponent } from "./app/app.component";
+import { appConfig } from "./app/app.config";
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+provideFluentDesignSystem().register(allComponents);
+
+bootstrapApplication(AppComponent, appConfig).catch((err) =>
+	console.error(err),
+);
