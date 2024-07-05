@@ -37,7 +37,7 @@
             "server": "src/main.server.ts",
             "prerender": false,
             "ssr": {
-              "entry": "server.ts"
+              "entry": "src/server.ts"
             }
           },
           "configurations": {
