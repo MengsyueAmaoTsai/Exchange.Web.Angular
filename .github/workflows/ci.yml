@@ -1,0 +1,38 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+
+  pull_request:
+    branches:
+      - master
+      - dev
+
+env:
+  NODE_VERSION: 22.x
+  CONFIGURATION: development
+  IMAGE: exchange-web
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+    - name: Install dependencies
+      run: npm i -g pnpm && pnpm i
+
+    - name: Angular Build
+      run: pnpm run build --configuration=${{ env.CONFIGURATION }} --verbose
+
+    - name: Build Docker Image
+      run: docker build -t ${{ env.IMAGE }}:latest .
