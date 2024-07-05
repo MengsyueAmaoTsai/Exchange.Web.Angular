@@ -6,7 +6,7 @@
     "watch": "ng build --watch --configuration development",
     "build": "ng build",
     "test": "ng test --code-coverage",
-    "dev": "ng serve --port 4000 --open",
+    "dev": "ng serve --port 9996 --open",
     "start": "node dist/exchange/server/server.mjs"
   },
   "private": true,
