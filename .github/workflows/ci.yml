@@ -47,6 +47,9 @@ jobs:
     - name: Angular Build
       run: pnpm run build --configuration=${{ env.CONFIGURATION }} --verbose
 
+    - name: Angular Tests
+      run: pnpm run test --configuration=${{ env.CONFIGURATION }} --watch=false
+
     - name: Build Docker Image
       run: |
         docker build -t ${{ env.IMAGE }}:latest .
