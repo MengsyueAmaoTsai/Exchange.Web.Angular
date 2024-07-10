@@ -1,4 +1,18 @@
 
 <div>
-  Home Page Content
+  <table>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let stock of instruments?.items">
+        <td>{{ stock.symbol }}</td>
+        <td>{{ stock.description }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
