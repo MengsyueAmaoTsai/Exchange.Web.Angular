@@ -1,29 +1,19 @@
 import { CommonModule } from "@angular/common";
-import { Component, OnInit, inject } from "@angular/core";
-import { InstrumentResponse, Paged } from "../../api.contract";
+import { Component, type OnInit, inject } from "@angular/core";
 import { ApiService } from "../../api.service";
+import { OrderEntryComponent } from "../../components/order-entry/order-entry.component";
 
 @Component({
 	selector: "app-home",
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, OrderEntryComponent],
 	templateUrl: "./home.component.html",
 	styleUrl: "./home.component.scss",
 })
 export class HomeComponent implements OnInit {
 	apiService = inject(ApiService);
-	instruments: Paged<InstrumentResponse> | null = null;
 
 	public constructor() {}
 
-	ngOnInit(): void {
-		this.apiService.getInstruments().subscribe(
-			(data: Paged<InstrumentResponse>) => {
-				this.instruments = data;
-			},
-			(error: Error) => {
-				console.log("Error fetching instruments: ", error);
-			},
-		);
-	}
+	ngOnInit(): void {}
 }

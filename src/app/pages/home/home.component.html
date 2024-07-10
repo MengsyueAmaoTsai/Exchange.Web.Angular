@@ -1,20 +1,4 @@
 
 <div>
-  <table>
-    <thead>
-      <tr>
-        <th>Symbol</th>
-        <th>Description</th>
-        <th>Exchange</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr *ngFor="let instrument of instruments?.items">
-        <td>{{ instrument.symbol }}</td>
-        <td>{{ instrument.description }}</td>
-        <td>{{ instrument.exchange }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <order-entry/>
 </div>

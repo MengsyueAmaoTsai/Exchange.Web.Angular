@@ -12,3 +12,8 @@ export type InstrumentResponse = {
 	description: string;
 	exchange: string;
 };
+
+export type AccountResponse = {
+	id: string;
+	name: string;
+};
