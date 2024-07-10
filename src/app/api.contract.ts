@@ -10,4 +10,5 @@ export type Paged<T> = {
 export type InstrumentResponse = {
 	symbol: string;
 	description: string;
+	exchange: string;
 };
