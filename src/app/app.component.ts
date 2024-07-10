@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { AppHeaderComponent } from "./components/app-header/app-header.component";
+import { AppStatusBarComponent } from "./components/app-status-bar/app-status-bar.component";
 
 @Component({
 	selector: "app-root",
 	standalone: true,
-	imports: [RouterOutlet, AppHeaderComponent],
+	imports: [RouterOutlet, AppHeaderComponent, AppStatusBarComponent],
 	templateUrl: "./app.component.html",
 	styleUrl: "./app.component.scss",
 })
