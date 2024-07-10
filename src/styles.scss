@@ -1,17 +1,4 @@
-// Font
-$fontFamilyBase: -apple-system, BlinkMacSystemFont,
-  'Segoe UI',
-  'Apple Color Emoji',
-  'Segoe UI Emoji',
-  'Segoe UI Web', sans-serif;
-
-// Foreground and background colors
-$themeColor: #FFF;
-$themeBackgroundColor: #141414;
-
-// Color schemes
-$bullishColor: #35A24A;
-$bearishColor: #E52545;
+@import '_variables';
 
 body {
   font-family: $fontFamilyBase;
