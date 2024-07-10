@@ -1,0 +1,27 @@
+<div class="watch-list__container">
+
+  <div class="watch-list__table">
+    <table>
+      <thead class="watch-list__table-head">
+        <tr>
+          <th>Instrument</th>
+          <th>Last Price</th>
+          <th>Change</th>
+          <th>%Change</th>
+          <th>Bid Price</th>
+          <th>Ask Price</th>
+          <th>Open</th>
+          <th>High</th>
+          <th>Low</th>
+          <th>Total Volume</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let instrument of instruments">
+          <td>{{ instrument.symbol }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
