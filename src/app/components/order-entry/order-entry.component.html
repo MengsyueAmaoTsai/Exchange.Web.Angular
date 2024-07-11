@@ -10,13 +10,13 @@
 
   <!-- Symbol search -->
   <div>
-    <input style="border-radius: 10000px;" type="text" placeholder="Search for a symbol">
+    <input type="text" placeholder="Search for a symbol">
   </div>
 
   <!-- Trade type (Buy/sell) switch -->
   <div>
-    <button [class.active]="tradeType === 'buy'" (click)="tradeType = 'buy'">Buy</button>
-    <button [class.active]="tradeType === 'sell'" (click)="tradeType = 'sell'">Sell</button>
+    <button [class.active]="tradeType === TradeType.Buy" (click)="tradeType = TradeType.Buy">Buy</button>
+    <button [class.active]="tradeType === TradeType.Sell" (click)="tradeType = TradeType.Sell">Sell</button>
   </div>
 
   <!-- order type select -->
@@ -24,6 +24,7 @@
     <select>
       <option *ngFor="let orderType of orderTypes" [value]="orderType">{{ orderType }}</option>
     </select>
+  </div>
 
   <!-- Time in force select -->
   <div>
@@ -39,8 +40,8 @@
 
   <!-- Place order button -->
   <div>
-    <button class=""
-      (click)="placeOrder(accountId, symbol, tradeType, orderType, timeInForce, quantity)"
-    >Place Order</button>
+    <button class="order-entry__place-order-button"
+      (click)="placeOrder(accountId, !instrument ? '' : instrument.symbol, tradeType, orderType, timeInForce, quantity)"
+    ><span class="order-entry__place-order-button__text">Place Order</span></button>
   </div>
 </div>

@@ -1,6 +1,9 @@
 import { CommonModule } from "@angular/common";
 import { Component, OnInit, inject } from "@angular/core";
-import { AccountResponse, Paged } from "../../api.contract";
+import { OrderType } from "../../../domain/order-type";
+import { TimeInForce } from "../../../domain/time-in-force";
+import { TradeType } from "../../../domain/trade-type";
+import { AccountResponse, InstrumentResponse, Paged } from "../../api.contract";
 import { ApiService } from "../../api.service";
 
 @Component({
@@ -11,22 +14,26 @@ import { ApiService } from "../../api.service";
 	styleUrl: "./order-entry.component.scss",
 })
 export class OrderEntryComponent implements OnInit {
-	accountId = "";
-	symbol = "";
-	tradeType = "buy";
-	orderType = "";
-	timeInForce = "";
-	quantity = 0;
-
-	accounts: AccountResponse[] = [];
-	orderTypes = ["market", "limit", "stop", "stop_limit"];
-	timeInForces = ["day", "gtc", "opg", "ioc", "fok"];
+	TradeType = TradeType;
 
 	apiService = inject(ApiService);
 
+	/** Options */
+	accounts: AccountResponse[] = [];
+	orderTypes = Object.values(OrderType);
+	timeInForces = Object.values(TimeInForce);
+
+	/** Form data */
+	accountId = "";
+	instrument: InstrumentResponse | null = null;
+	tradeType = TradeType.Buy;
+	orderType = OrderType.Market;
+	timeInForce = TimeInForce.ImmediateOrCancel;
+	quantity = 0;
+
 	public constructor() {}
 
-	ngOnInit(): void {
+	public ngOnInit(): void {
 		this.apiService.listAccounts().subscribe(
 			(data: Paged<AccountResponse>) => {
 				this.accounts = data.items;
