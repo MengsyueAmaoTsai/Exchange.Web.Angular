@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ClockComponent } from "../clock/clock.component";
+import { ClockComponent } from "../shared/clock/clock.component";
 
 @Component({
 	selector: "top-bar",
