@@ -1,24 +1,31 @@
-body {
-  margin: 0;
-  font-size: 13px;
-  color: #222;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  margin: 0;
+$font-family: Trebuchet MS,Roboto,Ubuntu,sans-serif;
+$font-size: 14px;
+$color-text-default: #FFFFFF;
+$color-background: #0f1720;
+
+html, body {
+  line-height: 1.5;
+  font-family: $font-family;
+  font-size: $font-size;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-x: none;
+  scrollbar-width: thin;
+  touch-action: manipulation;
   height: 100%;
-  background: #000;
   overflow: hidden;
-  color: #dde0e4;
-  font-family: sans-serif;
-  margin: 0px;
-  background-color: rgb(25, 28, 34);
-  display: block;
+}
+
+html, body, button, input, select, option, textarea {
+  font-family: $font-family;
+  font-size: $font-size;
+  -webkit-appearance: none;
+  color: $color-text-default;
+  border: 0;
+  border-radius: 0;
+}
+
+html, body, button, input, select option {
+  background: $color-background;
 }

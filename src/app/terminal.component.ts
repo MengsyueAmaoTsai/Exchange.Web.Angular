@@ -3,11 +3,11 @@ import { RouterOutlet } from "@angular/router";
 import { TopBarComponent } from "./components/top-bar/top-bar.component";
 
 @Component({
-	selector: "app-root",
+	selector: "terminal",
 	standalone: true,
 	imports: [RouterOutlet, TopBarComponent],
-	templateUrl: "./app.component.html",
-	styleUrl: "./app.component.scss",
+	templateUrl: "./terminal.component.html",
+	styleUrl: "./terminal.component.scss",
 })
 export class AppComponent {
 	title = "exchange";
