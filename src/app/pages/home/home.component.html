@@ -7,5 +7,30 @@
   </div>
 
   <div class="trading-pane-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Side</th>
+          <th>Quantity</th>
+          <th>Average price</th>
+          <th>Status</th>
+          <th>Created time utc</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (order of orders; track order) {
+          <tr>
+            <td>{{ order.symbol }}</td>
+            <td>{{ order.side }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>{{ order.price }}</td>
+            <td>{{ order.status }}</td>
+            <td>{{ order.createdTimeUtc }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
   </div>
 </div>
