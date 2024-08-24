@@ -1,0 +1,14 @@
+<div class="trading-clock">
+  <div class="clock-group">
+    <div class="clock-hour">{{ currentTime | date: 'hh' }}</div>
+    <div class="clock-colon">:</div>
+    <div class="clock-minute">{{ currentTime | date: 'mm' }}</div>
+    <div class="clock-colon">:</div>
+    <div class="clock-second">{{ currentTime | date: 'ss' }}</div>
+  </div>
+
+  <div class="clock-group">
+    <div class="clock-timezone">UTC</div>
+    <div class="clock-date">{{currentTime | date: 'yyyy-MM-dd'}}</div>
+  </div>
+</div>
