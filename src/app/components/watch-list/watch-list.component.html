@@ -1,0 +1,60 @@
+<div class="watch-list">
+  <table style="width: 100%">
+    <thead>
+      <tr class="header-row">
+        <th>
+          <div class="column-header">
+            <div class="column-header-text">Symbol</div>
+          </div>
+        </th>
+
+        <th>
+          <div class="column-header">
+            <div class="column-header-text">Last</div>
+          </div>
+        </th>
+        <th>
+          <div class="column-header">
+            <div class="column-header-text">Net change</div>
+          </div>
+        </th>
+        <th>
+          <div class="column-header">
+            <div class="column-header-text">Net change %</div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (symbol of watchList.symbols; track symbol) {
+        <tr class="data-row">
+          <td class="string-cell-container">
+            <div class="symbol-cell">
+              <div>{{ symbol }}</div>
+            </div>
+          </td>
+
+          <td class="numeric-cell-container">
+            <div class="last-cell">
+              <div class="numeric-cell-text">125.5</div>
+            </div>
+          </td>
+
+          <td class="numeric-cell-container">
+            <div class="last-cell">
+
+              <div class="numeric-cell-text">0</div>
+            </div>
+          </td>
+
+          <td class="numeric-cell-container">
+            <div class="last-cell">
+              <div class="numeric-cell-text">0</div>
+            </div>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

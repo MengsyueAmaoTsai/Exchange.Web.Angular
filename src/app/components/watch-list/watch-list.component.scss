@@ -1,0 +1,40 @@
+.string-cell-container {
+  text-align: left;
+  font-family: AramidBook, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+  cursor: pointer;
+  background: rgb(45, 50, 57);
+}
+
+.numeric-cell-container {
+  text-align: right;
+  font-family: AramidBook, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+  cursor: pointer;
+  background: rgb(45, 50, 57);
+}
+
+.symbol-cell {
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+
+.last-cell {
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+
+.numeric-cell-text {
+  text-align: right;
+  font-size: 12px;
+}
