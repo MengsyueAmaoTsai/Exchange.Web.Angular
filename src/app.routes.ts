@@ -1,4 +1,4 @@
-import { Routes } from "@angular/router";
+import type { Routes } from "@angular/router";
 import { DefaultComponent } from "./pages/default/default.component";
 import { DevComponent } from "./pages/dev/dev.component";
 

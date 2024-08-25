@@ -3,8 +3,8 @@ import {
 	allComponents,
 	provideFluentDesignSystem,
 } from "@fluentui/web-components";
-import { appConfig } from "./app/app.config";
-import { TerminalComponent } from "./app/terminal.component";
+import { appConfig } from "./app.config";
+import { TerminalComponent } from "./terminal.component";
 
 provideFluentDesignSystem().register(allComponents);
 
