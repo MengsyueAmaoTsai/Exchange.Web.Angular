@@ -1,60 +1,9 @@
-$indent: 8px;
 $color-border: #2b3543;
 $color-background: #0f1720;
+
+$color-bullish: #FF6341;
+$color-bearish: #3AF277;
+
 $font-size: 14px;
 
-.default-layout {
-  grid-template:
-  "top-bar top-bar top-bar top-bar top-bar top-bar" min-content
-  "left-bar left-panel chart chart right-panel right-bar" 1fr
-  "left-bar bot-panel bot-panel bot-panel bot-panel right-bar" min-content / min-content min-content min-content 1fr min-content min-content;
-  height: 100%;
-  display: grid;
-}
-
-.top-bar {
-  border-bottom: 1px solid $color-border;
-  height: calc($indent * 6 + 1px);
-  grid-area: top-bar;
-  justify-content: flex-start;
-  align-items: stretch;
-  width: 100%;
-  display: flex;
-  overflow: auto hidden;
-}
-
-.left-bar {
-  border-right: 1px solid $color-border;
-  -webkit-user-select: none;
-  user-select: none;
-  width: calc($indent * 6 + 1px);
-  grid-area: left-bar;
-  overflow-y: auto;
-}
-
-.right-bar {
-  background: $color-background;
-  font-size: $font-size;
-  grid-area: right-panel;
-  align-items: stretch;
-  height: 100%;
-  display: flex;
-  overflow: hidden;
-}
-
-.bottom-bar {
-  background: $color-background;
-  grid-area: bot-panel;
-  width: 100%;
-  position: relative;
-}
-
-.chart-container {
-  -webkit-user-select: none;
-  user-select: none;
-  grid-area: chart;
-  height: auto;
-  max-height: 100%;
-  position: relative;
-  overflow: hidden;
-}
+$indent: 8px;
