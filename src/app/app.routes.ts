@@ -3,13 +3,13 @@ import { DefaultComponent } from "./pages/default/default.component";
 
 export const routes: Routes = [
 	{
-		path: "**",
-		redirectTo: "/",
+		path: "",
+		component: DefaultComponent,
 		pathMatch: "full",
 	},
 	{
-		path: "",
-		component: DefaultComponent,
+		path: "**",
+		redirectTo: "/",
 		pathMatch: "full",
 	},
 ];
