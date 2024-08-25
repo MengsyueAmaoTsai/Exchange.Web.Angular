@@ -5,7 +5,7 @@
     "ng": "ng",
     "watch": "ng build --watch --configuration development",
     "build": "ng build",
-    "test": "ng test --code-coverage",
+    "test": "ng test --code-coverage --no-watch",
     "dev": "ng serve --port 9996 --open",
     "start": "node dist/exchange/server/server.mjs"
   },
