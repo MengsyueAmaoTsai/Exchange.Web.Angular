@@ -29,3 +29,11 @@ html, body, button, input, select, option, textarea {
 html, body, button, input, select option {
   background: $color-background;
 }
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  scrollbar-width: inherit;
+  margin: 0;
+  padding: 0;
+}

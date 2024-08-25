@@ -6,8 +6,6 @@ import { RouterOutlet } from "@angular/router";
 	standalone: true,
 	imports: [RouterOutlet],
 	templateUrl: "./terminal.component.html",
-	styleUrl: "./terminal.component.scss",
+	styleUrls: ["./terminal.component.scss"],
 })
-export class AppComponent {
-	title = "exchange";
-}
+export class TerminalComponent {}
