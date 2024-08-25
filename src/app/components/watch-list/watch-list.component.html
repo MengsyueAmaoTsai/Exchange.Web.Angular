@@ -1,4 +1,62 @@
 
 <div class="watch-list-items">
-  Watch list
+  <div class="watch-list-header">
+    <input placeholder="Search instruments">
+  </div>
+
+  <div class="watch-header-content">
+    <table>
+      <thead>
+        <tr class="header-row" style="display: flex;">
+          <th class="header-cell">
+            <div class="column-header-text">Symbol</div>
+          </th>
+
+          <th class="header-cell">
+            <div class="column-header-number">Last</div>
+          </th>
+
+          <th class="header-cell">
+            <div class="column-header-number">Net change</div>
+          </th>
+
+          <th class="header-cell">
+            <div class="column-header-number">Net change %</div>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (item of watchListItems; track item) {
+          <tr>
+            <td class="cell-container">
+              <div class="value-container">
+                <div class="symbol-value">
+                  {{ item.symbol }}
+                </div>
+              </div>
+            </td>
+
+            <td class="cell-container-number">
+              <div class="value-container">
+                {{ item.last }}
+              </div>
+            </td>
+
+            <td class="cell-container-number">
+              <div class="value-container">
+                <div class="signed-value">{{ item.change }}</div>
+              </div>
+            </td>
+
+            <td class="cell-container-number">
+              <div class="value-container">
+                <div class="signed-value">{{ item.changePercent }}%</div>
+              </div>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </div>
