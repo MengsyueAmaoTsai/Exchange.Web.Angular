@@ -1,12 +1,17 @@
 $font-family: Trebuchet MS,Roboto,Ubuntu,sans-serif;
 $font-size: 14px;
-$color-text-default: #FFFFFF;
-$color-background: #0f1720;
+$font-weight: 400;
+
+$color-text-default: #FFF;
+$color-background: rgb(27, 26, 25);
+$color-top-bar-background: #252423;
 
 html, body {
   line-height: 1.5;
   font-family: $font-family;
   font-size: $font-size;
+  font-weight: $font-weight;
+
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,6 +25,7 @@ html, body {
 html, body, button, input, select, option, textarea {
   font-family: $font-family;
   font-size: $font-size;
+  font-weight: $font-weight;
   -webkit-appearance: none;
   color: $color-text-default;
   border: 0;
