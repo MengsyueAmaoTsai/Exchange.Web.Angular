@@ -1,10 +1,12 @@
+import { CommonModule } from "@angular/common";
 import { Component, type OnDestroy, type OnInit } from "@angular/core";
 
 @Component({
 	selector: "system-clock",
 	standalone: true,
 	templateUrl: "./system-clock.component.html",
-	styleUrls: ["./system-clock.component.css"],
+	styleUrls: ["./system-clock.component.scss"],
+	imports: [CommonModule],
 })
 export class SystemClockComponent implements OnInit, OnDestroy {
 	private intervalId!: number;
