@@ -1,5 +1,11 @@
-import { CommonModule } from "@angular/common";
-import { Component, type OnDestroy, type OnInit } from "@angular/core";
+import { CommonModule, isPlatformBrowser } from "@angular/common";
+import {
+	Component,
+	type OnDestroy,
+	type OnInit,
+	PLATFORM_ID,
+	inject,
+} from "@angular/core";
 
 @Component({
 	selector: "system-clock",
@@ -9,8 +15,9 @@ import { Component, type OnDestroy, type OnInit } from "@angular/core";
 	imports: [CommonModule],
 })
 export class SystemClockComponent implements OnInit, OnDestroy {
-	private intervalId!: number;
+	private readonly platformId = inject(PLATFORM_ID);
 
+	private intervalId!: number;
 	public time: Date = new Date();
 	public timezone: string = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
@@ -21,7 +28,9 @@ export class SystemClockComponent implements OnInit, OnDestroy {
 	}
 
 	public ngOnInit(): void {
-		this.intervalId = window.setInterval(() => this.updateTime(), 1000);
+		if (isPlatformBrowser(this.platformId)) {
+			this.intervalId = window.setInterval(() => this.updateTime(), 1000);
+		}
 	}
 
 	private updateTime(): void {
