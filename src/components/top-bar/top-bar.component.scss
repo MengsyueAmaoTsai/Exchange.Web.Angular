@@ -1,5 +1,5 @@
-@use '../../assets/styles/colors' as color;
+@use '../../assets/styles/colors' as *;
 
 .top-bar {
-  background-color: color.$top-bar-background;
+  background-color: $top-bar-background;
 }
