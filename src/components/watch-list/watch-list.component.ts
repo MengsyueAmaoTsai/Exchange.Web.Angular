@@ -27,5 +27,11 @@ export class WatchListComponent {
 			change: 236,
 			changePercent: 0.76,
 		},
+		{
+			symbol: "NASDAQ:AAPL",
+			last: 168.34,
+			change: -4.43,
+			changePercent: -2.56,
+		},
 	];
 }

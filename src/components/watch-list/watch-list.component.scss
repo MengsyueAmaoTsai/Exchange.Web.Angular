@@ -1,4 +1,9 @@
-.header-cell {
+td, th, tr, table {
+  margin: 0;
+  padding: 0;
+}
+
+.watch-list-column-header {
   -webkit-box-align: center;
   align-items: center;
   padding: 5px;
@@ -15,44 +20,51 @@
   display: flex !important;
 }
 
-.column-header-text {
+.column-name {
   text-align: left;
   flex: 1 1 0px;
   cursor: pointer;
 }
 
-.column-header-number {
-  text-align: right;
-}
-
-.cell-container {
+.watch-list-cell-container-string {
   text-align: left;
   font-family: AramidBook, Arial, Helvetica, sans-serif;
   font-size: 12px;
   line-height: 1.2;
   cursor: pointer;
-  background: rgb(45, 50, 57);
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(45, 50, 57);
 }
 
-.cell-container-number {
+.watch-list-cell-container-number {
   text-align: right;
   font-family: AramidBook, Arial, Helvetica, sans-serif;
   font-size: 12px;
   line-height: 1.2;
   cursor: pointer;
-  background: rgb(45, 50, 57);
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(45, 50, 57);
 }
 
-.value-container {
-  padding: 5px;
-  white-space: nowrap;
+.watch-list-cell {
   overflow: hidden;
   border-right: 1px solid rgb(0, 0, 0);
   border-bottom: 1px solid rgb(0, 0, 0);
   box-sizing: border-box;
-}
-
-.signed-value {
-  font-size: 12px;
-  color: rgb(255, 54, 59);
+  white-space: nowrap;
+  padding: 5px;
 }

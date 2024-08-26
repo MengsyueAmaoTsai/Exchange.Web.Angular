@@ -1,62 +1,92 @@
+<div class="watch-list-control-pane">
+  <input type="text" placeholder="Search instruments">
+  <button>My watch list</button>
+</div>
 
-<div class="watch-list-items">
-  <div class="watch-list-header">
-    <input placeholder="Search instruments">
-  </div>
+<table>
+  <thead>
+    <tr>
+      <th>
+        <div class="watch-list-column-header-container">
+          <div class="watch-list-column-header">
+            <div class="column-name">Symbol</div>
+          </div>
+        </div>
+      </th>
 
-  <div class="watch-header-content">
-    <table>
-      <thead>
-        <tr class="header-row" style="display: flex;">
-          <th class="header-cell">
-            <div class="column-header-text">Symbol</div>
-          </th>
+      <th>
+        <div class="watch-list-column-header-container">
+          <div class="watch-list-column-header">
+            <div class="column-name">Last</div>
+          </div>
+        </div>
+      </th>
 
-          <th class="header-cell">
-            <div class="column-header-number">Last</div>
-          </th>
+      <th>
+        <div class="watch-list-column-header-container">
+          <div class="watch-list-column-header">
+            <div class="column-name">Net change</div>
+          </div>
+        </div>
+      </th>
 
-          <th class="header-cell">
-            <div class="column-header-number">Net change</div>
-          </th>
+      <th>
+        <div class="watch-list-column-header-container">
+          <div class="watch-list-column-header">
+            <div class="column-name">Net change %</div>
+          </div>
+        </div>
+      </th>
+    </tr>
+  </thead>
 
-          <th class="header-cell">
-            <div class="column-header-number">Net change %</div>
-          </th>
-        </tr>
-      </thead>
+  <tbody>
+    @for (item of watchListItems; track $index) {
+      <tr class="watch-list-body-row">
+        <td>
+          <div class="watch-list-cell-container-string">
+            <div class="watch-list-cell">
+              <div class="watch-list-symbol-text">{{ item.symbol }}</div>
+            </div>
+          </div>
+        </td>
 
-      <tbody>
-        @for (item of watchListItems; track item) {
-          <tr>
-            <td class="cell-container">
-              <div class="value-container">
-                <div class="symbol-value">
-                  {{ item.symbol }}
-                </div>
-              </div>
-            </td>
-
-            <td class="cell-container-number">
-              <div class="value-container">
+        <td>
+          <div class="watch-list-cell-container-number">
+            <div class="watch-list-cell">
+              <div
+                class="watch-list-symbol-text"
+                [style.color]="item.change < 0 ? '#FF363B' : '#3ff73d'">
                 {{ item.last }}
               </div>
-            </td>
+            </div>
+          </div>
+        </td>
 
-            <td class="cell-container-number">
-              <div class="value-container">
-                <div class="signed-value">{{ item.change }}</div>
+        <td>
+          <div class="watch-list-cell-container-number">
+            <div class="watch-list-cell">
+              <div
+                class="watch-list-symbol-text"
+                [style.color]="item.change < 0 ? '#FF363B' : '#3ff73d'">
+                {{ item.change }}
               </div>
-            </td>
+            </div>
+          </div>
+        </td>
 
-            <td class="cell-container-number">
-              <div class="value-container">
-                <div class="signed-value">{{ item.changePercent }}%</div>
+        <td>
+          <div class="watch-list-cell-container-number">
+            <div class="watch-list-cell">
+              <div
+                class="watch-list-symbol-text"
+                [style.color]="item.change < 0 ? '#FF363B' : '#3ff73d'">
+                {{ item.changePercent }}
               </div>
-            </td>
-          </tr>
-        }
-      </tbody>
-    </table>
-  </div>
-</div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

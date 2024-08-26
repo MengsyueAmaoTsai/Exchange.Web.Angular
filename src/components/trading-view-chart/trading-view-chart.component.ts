@@ -74,6 +74,12 @@ export class TradingViewChartComponent implements OnInit, OnDestroy {
 				fullscreen: false,
 				autosize: true,
 				theme: "dark",
+				overrides: {
+					"paneProperties.backgroundType": "solid",
+					"paneProperties.background": "#242424",
+					"paneProperties.vertGridProperties.color": "#242424",
+					"paneProperties.horzGridProperties.color": "#242424",
+				},
 			};
 
 			this.chartInstance = this.createTradingViewChart(chartOptions);

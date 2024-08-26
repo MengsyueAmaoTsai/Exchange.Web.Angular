@@ -1,0 +1,5 @@
+@use '../../assets/styles/colors' as color;
+
+.top-bar {
+  background-color: color.$top-bar-background;
+}

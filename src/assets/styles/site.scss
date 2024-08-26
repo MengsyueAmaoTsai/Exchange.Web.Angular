@@ -1,0 +1,16 @@
+@use 'colors' as color;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: az_ea_font, "Segoe UI", az_font, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: color.$container-background-primary;
+  fill: color.$icon-primary;
+  color: #FFF;
+}

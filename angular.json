@@ -33,7 +33,7 @@
               },
               "src/assets"
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/assets/styles/site.scss"],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": false,
