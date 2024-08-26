@@ -1,15 +1,15 @@
 import { TestBed } from "@angular/core/testing";
-import { TerminalComponent } from "../src/terminal.component";
+import { ExchangeComponent } from "../src/exchange.component";
 
 describe("TerminalComponent", () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [TerminalComponent],
+			imports: [ExchangeComponent],
 		}).compileComponents();
 	});
 
 	it("should create the app", () => {
-		const fixture = TestBed.createComponent(TerminalComponent);
+		const fixture = TestBed.createComponent(ExchangeComponent);
 		const app = fixture.componentInstance;
 		expect(app).toBeTruthy();
 	});

@@ -4,10 +4,10 @@ import {
 	provideFluentDesignSystem,
 } from "@fluentui/web-components";
 import { appConfig } from "./app.config";
-import { TerminalComponent } from "./terminal.component";
+import { ExchangeComponent } from "./exchange.component";
 
 provideFluentDesignSystem().register(allComponents);
 
-bootstrapApplication(TerminalComponent, appConfig).catch((err) =>
+bootstrapApplication(ExchangeComponent, appConfig).catch((err) =>
 	console.error(err),
 );
