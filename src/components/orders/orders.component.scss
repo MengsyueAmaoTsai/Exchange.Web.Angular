@@ -1,0 +1,29 @@
+.grid-header {
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.header-row {
+  display: flex;
+}
+
+.header-cell {
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 5px;
+  background: rgb(32, 36, 42);
+  border-top: 1px solid rgb(53, 60, 69);
+  border-right: 1px solid rgb(53, 60, 69);
+  border-bottom: 1px solid rgb(53, 60, 69);
+  color: rgb(161, 169, 179);
+  font-size: 11px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex !important;
+}
+
+.column-name {
+  text-align: left;
+  flex: 1 1 0px;
+  cursor: pointer;
+}

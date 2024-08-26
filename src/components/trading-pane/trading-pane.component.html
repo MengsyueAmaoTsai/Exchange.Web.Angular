@@ -3,10 +3,10 @@
   <button (click)="activateTab('orders')">Orders</button>
 
   @if (currentTab === 'positions') {
-    <div style="color: #FFF;">positions tab</div>
+    <positions />
   }
 
   @if (currentTab === 'orders') {
-    <div style="color: #FFF;">orders tab</div>
+    <orders />
   }
 </div>
