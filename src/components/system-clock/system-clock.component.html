@@ -1,9 +1,14 @@
-<div class="system-clock-container">
-  <div>{{ timezone }}</div>
-  <div>{{ time | date : 'yyyy-MM-dd' }}</div>
-  <div>{{ time | date: 'HH' }}</div>
-  <div>:</div>
-  <div>{{ time | date: 'mm' }}</div>
-  <div>:</div>
-  <div>{{ time | date: 'ss' }}</div>
+<div id="SystemClock" class="system-clock-container">
+  <div class="system-clock-date-and-timezone">
+    <div class="system-clock__timezone">{{ timezone }}</div>
+    <div class="system-clock__date">{{ time | date : 'yyyy-MM-dd' }}</div>
+  </div>
+
+  <div class="system-clock-time">
+    <div class="system-clock__hour">{{ time | date: 'HH' }}</div>
+    <div class="system-clock__colon">:</div>
+    <div class="system-clock__minute">{{ time | date: 'mm' }}</div>
+    <div class="system-clock__colon">:</div>
+    <div class="system-clock__second">{{ time | date: 'ss' }}</div>
+  </div>
 </div>
