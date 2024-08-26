@@ -1,20 +1,38 @@
-<div class="order-pane">
-
-  <div>
-    <input type="text">
+<div class="order-entry-root">
+  <div class="account-group">
+    <label>Account</label>
+    <select>
+      <option>Account 1</option>
+      <option>Account 2</option>
+      <option>Account 3</option>
+    </select>
   </div>
 
-  <div>
-    <button>Buy</button>
-    <button>Sell</button>
+  <div class="instrument-group">
+    <label>Instrument</label>
+    <input type="text" placeholder="Search instruments">
   </div>
 
-  <div>
+  <div class="quantity-group">
+    <label>Quantity</label>
     <input type="number" placeholder="Quantity">
   </div>
 
-  <div>
+  <div class="time-in-force-group">
+    <label>Time in force</label>
+    <select>
+      <option>Day</option>
+      <option>Good till cancel</option>
+    </select>
+  </div>
+
+  <div class="price-group">
+    <label>Price</label>
     <input type="number" placeholder="Price">
   </div>
-  <button>Place order</button>
+
+  <div class="button-group">
+    <button class="buy-button">Buy</button>
+    <button class="sell-button">Sell</button>
+  </div>
 </div>

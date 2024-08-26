@@ -1,0 +1,9 @@
+@use '../../assets/styles/colors.scss' as *;
+
+.buy-button {
+  background-color: $color-bullish;
+}
+
+.sell-button {
+  background-color: $color-bearish;
+}
