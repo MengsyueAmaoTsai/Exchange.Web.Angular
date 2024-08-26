@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { OrderPaneComponent } from "../../components/order-pane/order-pane.component";
+import { OrderEntryComponent } from "../../components/order-entry/order-entry.component";
 import { TradingPaneComponent } from "../../components/trading-pane/trading-pane.component";
 import { TradingViewChartComponent } from "../../components/trading-view-chart/trading-view-chart.component";
 import { WatchListComponent } from "../../components/watch-list/watch-list.component";
@@ -12,7 +12,7 @@ import { WatchListComponent } from "../../components/watch-list/watch-list.compo
 	imports: [
 		WatchListComponent,
 		TradingPaneComponent,
-		OrderPaneComponent,
+		OrderEntryComponent,
 		TradingViewChartComponent,
 	],
 })

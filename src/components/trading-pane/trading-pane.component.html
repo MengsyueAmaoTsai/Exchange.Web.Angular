@@ -1,3 +1,12 @@
-<div class="trading-pane">
-  Trading pane
+<div class="trading-pane-root">
+  <button (click)="activateTab('positions')">Positions</button>
+  <button (click)="activateTab('orders')">Orders</button>
+
+  @if (currentTab === 'positions') {
+    <div style="color: #FFF;">positions tab</div>
+  }
+
+  @if (currentTab === 'orders') {
+    <div style="color: #FFF;">orders tab</div>
+  }
 </div>
