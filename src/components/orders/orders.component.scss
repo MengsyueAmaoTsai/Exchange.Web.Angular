@@ -1,29 +1,38 @@
-.grid-header {
-  overflow: scroll;
-  scrollbar-width: none;
-}
+@use '../../assets/styles/colors' as *;
 
-.header-row {
-  display: flex;
-}
+$color-order-status-rejected: rgb(96, 3, 0);
 
-.header-cell {
-  -webkit-box-align: center;
-  align-items: center;
-  padding: 5px;
-  background: rgb(32, 36, 42);
-  border-top: 1px solid rgb(53, 60, 69);
-  border-right: 1px solid rgb(53, 60, 69);
-  border-bottom: 1px solid rgb(53, 60, 69);
-  color: rgb(161, 169, 179);
-  font-size: 11px;
-  overflow: hidden;
-  white-space: nowrap;
-  display: flex !important;
-}
-
-.column-name {
+.cell-container {
   text-align: left;
-  flex: 1 1 0px;
+  font-family: AramidBook, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
   cursor: pointer;
+  background: rgb(45, 50, 57);
+}
+
+.inner-cell {
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+
+.trade-type-cell {
+  color: $color-bullish;
+  text-align: center;
+}
+
+.order-status-cell {
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: $color-order-status-rejected;
+  width: 100%;
+  height: 19px;
+  line-height: 20px;
+  position: relative;
+  top: -2px;
 }
