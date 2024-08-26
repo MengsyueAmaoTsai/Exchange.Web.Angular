@@ -14,15 +14,15 @@ export class SystemClockComponent implements OnInit, OnDestroy {
 	public time: Date = new Date();
 	public timezone: string = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-	public ngOnDestroy = (): void => {
+	public ngOnDestroy(): void {
 		if (this.intervalId) {
 			clearInterval(this.intervalId);
 		}
-	};
+	}
 
-	public ngOnInit = (): void => {
+	public ngOnInit(): void {
 		this.intervalId = window.setInterval(() => this.updateTime(), 1000);
-	};
+	}
 
 	private updateTime(): void {
 		this.time = new Date();

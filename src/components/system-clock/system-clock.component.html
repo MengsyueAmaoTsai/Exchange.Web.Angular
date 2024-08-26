@@ -1,5 +1,9 @@
 <div class="system-clock-container">
   <div>{{ timezone }}</div>
   <div>{{ time | date : 'yyyy-MM-dd' }}</div>
-  <div>{{ time | date: 'HH:mm:ss' }}</div>
+  <div>{{ time | date: 'HH' }}</div>
+  <div>:</div>
+  <div>{{ time | date: 'mm' }}</div>
+  <div>:</div>
+  <div>{{ time | date: 'ss' }}</div>
 </div>
