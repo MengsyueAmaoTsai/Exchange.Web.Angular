@@ -1,6 +1,12 @@
 <div class="default-layout">
   <div class="left-container">
-    <watch-list></watch-list>
+    <div>
+      <div style="position: relative; z-index: 100; transform: translate(0px, 0px, 0px);">
+        <div style="animation: fadeIn 0.5s forwards;">
+          <watch-list/>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="center-container">
@@ -8,8 +14,8 @@
       <trading-view-chart/>
     </div>
 
-    <div class="center-bottom-container">
-      <trading-pane/>
+    <div>
+      <trading-pane />
     </div>
   </div>
 
