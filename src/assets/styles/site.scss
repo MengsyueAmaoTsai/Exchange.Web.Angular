@@ -1,9 +1,29 @@
+$font-family: Segoe UI, Segoe WP, Arial, Sans-Serif;
+
 body {
-  background-color: #242424;
+  font-family: $font-family;
+  margin: 0;
+  background: #242424;
 }
 
-body, html {
-  font-family: Segoe UI, Segoe WP, Arial, Sans-Serif;
-  background: #292929;
-  margin: 0;
+// References
+.msn-body-html {
+  font-weight: 600;
 }
+
+.ts-body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  height: 100%;
+  overflow: hidden;
+  color: #dde0e4;
+}
+
