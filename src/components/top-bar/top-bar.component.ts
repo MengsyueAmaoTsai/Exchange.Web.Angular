@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { CurrentUserComponent } from "../current-user/current-user.component";
 import { SystemClockComponent } from "../system-clock/system-clock.component";
 
 @Component({
@@ -6,6 +7,6 @@ import { SystemClockComponent } from "../system-clock/system-clock.component";
 	templateUrl: "./top-bar.component.html",
 	styleUrls: ["./top-bar.component.scss"],
 	standalone: true,
-	imports: [SystemClockComponent],
+	imports: [SystemClockComponent, CurrentUserComponent],
 })
 export class TopBarComponent {}
