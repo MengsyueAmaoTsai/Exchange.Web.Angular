@@ -14,6 +14,7 @@ export class SystemClockComponent implements OnInit, OnDestroy {
 
 	public time: Date = new Date();
 	public timezone: string = Intl.DateTimeFormat().resolvedOptions().timeZone;
+	public menuVisible = false;
 
 	public ngOnDestroy(): void {
 		if (this.intervalId) {
@@ -25,5 +26,9 @@ export class SystemClockComponent implements OnInit, OnDestroy {
 		this.intervalId = window.setInterval(() => {
 			this.time = new Date();
 		}, 1000);
+	}
+
+	public toggleMenu(): void {
+		this.menuVisible = !this.menuVisible;
 	}
 }
