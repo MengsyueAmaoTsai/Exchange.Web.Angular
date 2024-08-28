@@ -1,0 +1,16 @@
+<div class="current-user-root">
+  <div class="current-user">
+    <button class="current-user-button">
+      <div class="current-user-info-container">
+        <div class="current-user-info">
+          <div class="current-user-email">{{ currentUser.email }}</div>
+          <div class="current-user-name">{{ currentUser.name }}</div>
+        </div>
+
+        <div class="avatar-image-container">
+          <img class="avatar-image" [src]="defaultAvatarImage">
+        </div>
+      </div>
+    </button>
+  </div>
+</div>

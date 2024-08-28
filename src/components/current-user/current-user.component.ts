@@ -7,4 +7,10 @@ import { Component } from "@angular/core";
   standalone: true,
   imports: [],
 })
-export class CurrentUserComponent {}
+export class CurrentUserComponent {
+  public defaultAvatarImage = "assets/images/default-avatar-small.png";
+  public currentUser = {
+    name: 'Mengsyue Amao Tsai',
+    email: 'mengsyue.tsai@outlook.com'
+  }
+}

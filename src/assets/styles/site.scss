@@ -19,7 +19,30 @@ a {
   text-decoration: none;
 }
 
+img {
+  overflow: hidden;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+img,
+a img,
+:link img,
+:visited img {
+  border: 0;
+}
+
 [role="button"],
 [role="link"] {
   cursor: pointer;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  font-size: 13px;
+  line-height: 1.385;
+  background: none;
+  color: inherit;
 }
