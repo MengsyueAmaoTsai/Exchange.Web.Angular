@@ -46,3 +46,7 @@ button,
   background: none;
   color: inherit;
 }
+
+.hide-focus-outline * {
+  outline: 0 !important;
+}

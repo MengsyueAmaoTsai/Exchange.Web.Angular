@@ -12,15 +12,14 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
-  // Hide focus outline
-  outline: 0 !important;
 }
 
 .top-bar {
   display: flex;
   align-items: center;
+}
 
-  // Hide focus outline
-  outline: 0 !important;
+.top-bar-buttons-container {
+  display: flex;
+  flex: 0 0 auto;
 }

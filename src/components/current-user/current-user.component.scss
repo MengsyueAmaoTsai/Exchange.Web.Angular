@@ -4,8 +4,6 @@
   flex: 0 0 auto;
   box-sizing: border-box;
   -webkit-app-region: no-drag;
-
-  outline: 0 !important;
 }
 
 .current-user {
@@ -13,8 +11,6 @@
   flex: 0 0 auto;
   box-sizing: border-box;
   z-index: 200;
-
-  outline: 0 !important;
 }
 
 .current-user-button {
@@ -30,8 +26,6 @@
   justify-content: center;
 
   fill: $color-top-bar-text;
-
-  outline: 0 !important;
 }
 
 .current-user-info-container {
@@ -39,16 +33,12 @@
   position: relative;
   align-items: center;
   height: 64px;
-
-  outline: 0 !important;
 }
 
 .current-user-info {
   text-align: left;
   flex: 1 1 auto;
   padding-left: 20px;
-
-  outline: 0 !important;
 }
 
 .current-user-email {
@@ -78,9 +68,6 @@
   padding-left: 6px;
   padding-right: 6px;
   box-sizing: content-box;
-
-  // No outline on focus
-  outline: 0 !important;
 }
 
 .avatar-image {
@@ -88,7 +75,4 @@
   width: 28px;
   border: 0;
   border-radius: 28px;
-
-  // No outline on focus
-  outline: 0 !important;
 }
