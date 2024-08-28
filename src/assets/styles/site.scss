@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+a[href] {
+  -webkit-touch-callout: default;
+}
+
 img {
   overflow: hidden;
   max-height: 100%;
@@ -32,6 +36,9 @@ a img,
   border: 0;
 }
 
+svg {
+  overflow: hidden;
+}
 [role="button"],
 [role="link"] {
   cursor: pointer;
