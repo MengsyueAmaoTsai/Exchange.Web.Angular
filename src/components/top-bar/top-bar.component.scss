@@ -1,0 +1,26 @@
+@use '../../assets/styles/colors.scss' as *;
+
+.top-bar-root {
+  background-color: $color-top-bar-background;
+  color: $color-top-bar-text;
+
+  font-size: 13px;
+  height: 64px;
+
+  // Un-selectable
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  // Hide focus outline
+  outline: 0 !important;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+
+  // Hide focus outline
+  outline: 0 !important;
+}

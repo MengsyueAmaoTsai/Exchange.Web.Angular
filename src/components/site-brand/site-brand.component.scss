@@ -1,0 +1,24 @@
+@use '../../assets/styles/colors.scss' as *;
+
+.top-bar-brand {
+  flex: 0 1 auto;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-width: 0;
+}
+
+.top-bar-brand-link {
+  display: inline-block;
+  font-size: 20px;
+  padding: 0 20px;
+  height: 64px;
+  line-height: 64px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  box-sizing: border-box;
+  color: $color-top-bar-text;
+}
