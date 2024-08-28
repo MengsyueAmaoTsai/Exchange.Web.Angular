@@ -1,11 +1,42 @@
 .default-layout {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Three columns: Left, Center, Right */
+  gap: 8px; /* Space between columns */
+  height: 100vh; /* Full viewport height */
+  padding: 8px; /* Padding around the grid */
+  box-sizing: border-box; /* Include padding in width/height */
 }
 
-.default-layout * {
-  color: #FFF;
+.left-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 .chart-container {
-  flex: 1 1 auto;
+  flex: 1; /* Takes remaining vertical space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px; /* Margin below the chart */
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.trading-info-container {
+  display: flex;
+  flex-direction: column;
 }
