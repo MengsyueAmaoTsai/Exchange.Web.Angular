@@ -124,6 +124,7 @@ $color-status-highlight-warning: #ffba01;
 $color-status-highlight-change: #8a2da5;
 $color-search-highlight-text: #000;
 $color-search-highlight-background: #ff0;
+
 $copilot-icon-background: #3b3a39;
 $copilot-icon-text-color: #fff;
 $copilot-icon-hover-background: #484644;
@@ -133,19 +134,22 @@ $copilot-icon-active-text-color: #f3f2f1;
 $copilot-icon-focus-background: #3b3a39;
 $copilot-icon-focus-text-color: #98b3e1;
 
-$top-bar-background: #252423;
-$top-bar-action-hover-bg-color: #605e5c;
-$top-bar-action-pressed-bg-color: #605e5c;
-$top-bar-button-active-background: #fff;
+$color-top-bar-background: #252423;
+$color-top-bar-action-hover-bg-color: #605e5c;
+$color-top-bar-action-pressed-bg-color: #605e5c;
+$color-top-bar-button-active-background: #fff;
 $color-top-bar-text: #fff;
-$top-bar-hamburger: #fff;
-$top-bar-alternate-text-fill: #fff;
-$top-bar-outline-color: #fff;
-$top-bar-active-outline-color: #605e5c;
+$color-top-bar-hamburger: #fff;
+$color-top-bar-alternate-text-fill: #fff;
+$color-top-bar-outline: #fff;
+$color-top-bar-active-outline: #605e5c;
+
 $search-background: #605e5c;
 $search-background-focus: #fff;
+
 $notification-unread-background: #fff;
 $notification-unread-text: #323130;
+
 $sidebar-background: #323130;
 $sidebar-text: #fff;
 $sidebar-active-background: #3e3d3c;

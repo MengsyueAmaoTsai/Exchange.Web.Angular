@@ -1,5 +1,32 @@
 @use '../../assets/styles/colors.scss' as *;
 
+.top-bar-root {
+  height: 40px;
+  position: relative;
+  z-index: 5;
+  flex: 0 0 auto;
+  font-size: 13px;
+  background-color: $color-top-bar-background;
+  color: $color-top-bar-text;
+
+  // un selectable
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.top-bar {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-app-region: drag;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
 .top-bar-buttons {
   display: flex;
   flex: 0 0 auto;
