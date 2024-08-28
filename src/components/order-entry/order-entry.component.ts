@@ -10,6 +10,7 @@ export class OrderEntryComponent {
 	public async buy(): Promise<void> {
 		console.log("Buy");
 	}
+
 	public async sell(): Promise<void> {
 		console.log("Sell");
 	}

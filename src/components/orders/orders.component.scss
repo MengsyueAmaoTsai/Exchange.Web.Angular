@@ -1,6 +1,9 @@
 @use '../../assets/styles/colors' as *;
 
-$color-order-status-rejected: rgb(96, 3, 0);
+$color-order-status-rejected: #600300;
+$color-order-status-pending: #999999;
+$color-order-status-cancelled: #BD7214;
+$color-order-status-executed: #0077BF;
 
 .cell-container {
   text-align: left;
