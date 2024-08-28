@@ -16,7 +16,7 @@ $todo-background-light: #292929;
 $todo-background-muted: #585858;
 $todo-background-muted-80-10: #292929;
 $todo-background-muted-82-10: #292929;
-$todo-background-mutedHover: #888;
+$todo-background-muted-hover: #888;
 $todo-background-inverted: #b8b8b8;
 $todo-border-muted: #414141;
 $todo-border-muted-80-20: #292929;
@@ -135,14 +135,14 @@ $copilot-icon-focus-background: #3b3a39;
 $copilot-icon-focus-text-color: #98b3e1;
 
 $color-top-bar-background: #252423;
-$color-top-bar-action-hover-bg-color: #605e5c;
-$color-top-bar-action-pressed-bg-color: #605e5c;
-$color-top-bar-button-active-background: #fff;
 $color-top-bar-text: #fff;
-$color-top-bar-hamburger: #fff;
+$color-top-bar-button-background-active: #fff;
 $color-top-bar-alternate-text-fill: #fff;
+$color-top-bar-action-background-hover: #605e5c;
+$color-top-bar-action-background-pressed: #605e5c;
+$color-top-bar-outline-active: #605e5c;
+$color-top-bar-hamburger: #fff;
 $color-top-bar-outline: #fff;
-$color-top-bar-active-outline: #605e5c;
 
 $search-background: #605e5c;
 $search-background-focus: #fff;
