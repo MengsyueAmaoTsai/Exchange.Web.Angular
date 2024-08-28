@@ -1,3 +1,16 @@
-<div>
-  {{ time | date: 'HH:mm:ss' }}
+<div class="system-clock-root">
+  <a role="button">
+    <div class="clock-group" style="display: flex;">
+      <div class="system-clock-hour">{{ time | date: 'HH' }}</div>
+      <div class="system-clock-colon">:</div>
+      <div class="system-clock-minute">{{ time | date: 'mm' }}</div>
+      <div class="system-clock-colon">:</div>
+      <div class="system-clock-second">{{ time | date: 'ss' }}</div>
+    </div>
+
+    <div class="clock-group">
+      <div class="system-clock-timezone">{{ timezone }} </div>
+      <div class="system-clock-date">{{ time | date: 'yyyy-MM-dd' }}</div>
+    </div>
+  </a>
 </div>
