@@ -17,12 +17,13 @@
   margin: 0 5px 0 1px;
 }
 
-.system-clock__timezone, .system-clock__date {
+.system-clock__timezone,
+.system-clock__date {
   font-size: 9px;
   float: right;
   height: 11px;
   clear: both;
-  color: #8b929c;
+  color: #fff;
   text-transform: uppercase;
   padding-bottom: 2px;
 }
@@ -37,7 +38,7 @@
   float: left;
   height: 27px;
   width: 29px;
-  color: #b0b6bd;
+  color: #fff;
   line-height: 27px;
 }
 
