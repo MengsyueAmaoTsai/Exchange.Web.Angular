@@ -5,6 +5,5 @@ import { Component } from "@angular/core";
 	standalone: true,
 	templateUrl: "./default.component.html",
 	styleUrls: ["./default.component.scss"],
-	imports: [],
 })
 export class DefaultComponent {}

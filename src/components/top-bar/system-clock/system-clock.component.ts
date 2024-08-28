@@ -1,5 +1,5 @@
-import { CommonModule } from "@angular/common";
-import { Component } from "@angular/core";
+import { CommonModule, isPlatformBrowser } from "@angular/common";
+import { Component, PLATFORM_ID, inject } from "@angular/core";
 import type { OnDestroy, OnInit } from "@angular/core";
 
 @Component({
@@ -10,6 +10,7 @@ import type { OnDestroy, OnInit } from "@angular/core";
 	imports: [CommonModule],
 })
 export class SystemClockComponent implements OnInit, OnDestroy {
+	private readonly platformId = inject(PLATFORM_ID);
 	private intervalId!: number;
 
 	public time: Date = new Date();
@@ -23,9 +24,11 @@ export class SystemClockComponent implements OnInit, OnDestroy {
 	}
 
 	public ngOnInit(): void {
-		this.intervalId = window.setInterval(() => {
-			this.time = new Date();
-		}, 1000);
+		if (isPlatformBrowser(this.platformId)) {
+			this.intervalId = window.setInterval(() => {
+				this.time = new Date();
+			}, 1000);
+		}
 	}
 
 	public toggleMenu(): void {
