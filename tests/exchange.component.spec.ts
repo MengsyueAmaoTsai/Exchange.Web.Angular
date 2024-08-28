@@ -1,7 +1,7 @@
 import { TestBed } from "@angular/core/testing";
 import { ExchangeComponent } from "../src/exchange.component";
 
-describe("TerminalComponent", () => {
+describe("ExchangeComponent", () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			imports: [ExchangeComponent],
