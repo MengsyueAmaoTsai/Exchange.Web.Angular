@@ -8,12 +8,6 @@
   font-size: 13px;
   background-color: $color-top-bar-background;
   color: $color-top-bar-text;
-
-  // un selectable
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .top-bar {
@@ -25,6 +19,15 @@
   display: flex;
   align-content: center;
   align-items: center;
+}
+
+.feature-button {
+  width: 48px;
+  display: flex;
+}
+
+.feature-button svg {
+  transform: scaleX(-1);
 }
 
 .top-bar-placeholder {
