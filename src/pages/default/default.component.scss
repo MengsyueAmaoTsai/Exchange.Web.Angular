@@ -1,2 +1,11 @@
 .default-layout {
+  display: flex;
+}
+
+.default-layout * {
+  color: #FFF;
+}
+
+.chart-container {
+  flex: 1 1 auto;
 }
