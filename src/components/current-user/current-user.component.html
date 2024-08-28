@@ -1,0 +1,26 @@
+<div class="current-user">
+  <button
+    class="current-user-menu-button"
+    (click)="menuVisible = !menuVisible"
+  >
+    <div
+      class="current-user-menu-header"
+      :title="`Name: ${currentUser.name}\nEmail: ${currentUser.email}`"
+    >
+      <div class="current-user-info-container">
+        <div class="current-user-email">{{ currentUser.email }}</div>
+        <div class="current-user-name">{{ currentUser.name }}</div>
+      </div>
+
+      <div class="current-user-avatar-container">
+        <img class="current-user-avatar-image" :src="currentUser.avatar" />
+      </div>
+    </div>
+  </button>
+
+  @if (menuVisible) {
+    <div>
+      Hi
+    </div>
+  }
+</div>
