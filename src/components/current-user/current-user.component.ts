@@ -1,15 +1,17 @@
 import { Component } from "@angular/core";
+import { CurrentUserMenuComponent } from "./current-user-menu.component";
 
 @Component({
 	selector: "current-user",
 	templateUrl: "./current-user.component.html",
 	styleUrls: ["./current-user.component.scss"],
 	standalone: true,
+	imports: [CurrentUserMenuComponent],
 })
 export class CurrentUserComponent {
-	public dropdownVisible = false;
+	public menuVisible = false;
 
 	public toggleDropdown(): void {
-		this.dropdownVisible = !this.dropdownVisible;
+		this.menuVisible = !this.menuVisible;
 	}
 }
