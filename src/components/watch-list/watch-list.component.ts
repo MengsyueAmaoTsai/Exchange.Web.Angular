@@ -6,4 +6,15 @@ import { Component } from "@angular/core";
 	styleUrls: ["./watch-list.component.scss"],
 	standalone: true,
 })
-export class WatchListComponent {}
+export class WatchListComponent {
+	public watchList = [
+		{
+			symbol: "MSFT",
+			description: "Microsoft Corporation",
+		},
+		{
+			symbol: "AAPL",
+			description: "Apple Inc.",
+		},
+	];
+}

@@ -1,3 +1,28 @@
-<div>
-  Watch list
+<div class="watch-list-root">
+  <div class="watch-list-grid">
+    <div class="watch-list-grid-header">
+      <div class="watch-list-grid-row">
+        <div class="watch-list-grid-header-cell">
+            Symbol
+        </div>
+
+        <div class="watch-list-grid-header-cell">
+          Description
+        </div>
+      </div>
+    </div>
+
+    <div class="watch-list-grid-body">
+      @for (item of watchList; track item) {
+        <div class="watch-list-grid-row">
+          <div class="watch-list-grid-data-cell">
+            <div>{{ item.symbol }}</div>
+          </div>
+          <div class="watch-list-grid-data-cell">
+            <div>{{ item.description }}</div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
 </div>
