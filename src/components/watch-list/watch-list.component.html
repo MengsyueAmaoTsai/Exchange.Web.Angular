@@ -1,3 +1,24 @@
 <div class="watch-list-root">
 
+  @for (item of currentWatchList.items; track item) {
+    <div>
+      {{ item.symbol }}
+    </div>
+
+    <div>
+      {{ item.description }}
+    </div>
+
+    <div>
+      {{ item.last }}
+    </div>
+
+    <div>
+      {{ item.netChange }}
+    </div>
+
+    <div>
+      {{ item.netChangePercent }}
+    </div>
+  }
 </div>
