@@ -11,10 +11,16 @@ export class WatchListComponent {
 		{
 			symbol: "MSFT",
 			description: "Microsoft Corporation",
+			last: 416.34,
+			netChange: 3.22,
+			netChangePercent: 0.78,
 		},
 		{
 			symbol: "AAPL",
 			description: "Apple Inc.",
+			last: 231.09,
+			netChange: 1.3,
+			netChangePercent: 0.57,
 		},
 	];
 }
