@@ -1,3 +1,31 @@
-<div>
-  Order entry
+<div class="order-entry-root">
+  <input type="text" placeholder="Search symbol">
+
+  <select>
+  </select>
+
+  <select>
+  </select>
+
+  <input type="number">
+
+  <span class="order-entry-action">
+    <button type="button" class="button-bullish" (click)="buy()">
+      <span class="button-flex-container">
+        <span class="button-text-container">
+          <span class="button-text">Buy</span>
+        </span>
+      </span>
+    </button>
+  </span>
+
+  <span class="order-entry-action">
+    <button type="button" class="button-bearish" (click)="sell()">
+      <span class="button-flex-container">
+        <span class="button-text-container">
+          <span class="button-text">Sell</span>
+        </span>
+      </span>
+    </button>
+  </span>
 </div>

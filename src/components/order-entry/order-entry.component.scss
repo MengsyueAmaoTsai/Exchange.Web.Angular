@@ -1,0 +1,77 @@
+@use '../../assets/styles/colors.scss' as *;
+
+.order-entry-root {
+  color: white;
+}
+
+.order-entry-action {
+  margin: 0px 4px;
+}
+
+.button-bullish {
+  outline: transparent;
+  position: relative;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px;
+  font-weight: 400;
+  border: 1px solid $color-bullish;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0px 16px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 80px;
+  height: 24px;
+  background-color: $color-bullish;
+  color: rgb(255, 255, 255);
+  user-select: none;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.button-bearish {
+  outline: transparent;
+  position: relative;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px;
+  font-weight: 400;
+  border: 1px solid $color-bearish;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0px 16px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 80px;
+  height: 24px;
+  background-color: $color-bearish;
+  color: rgb(255, 255, 255);
+  user-select: none;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.button-flex-container {
+  display: flex;
+  height: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-text-container {
+  flex-grow: 1;
+  display: block;
+}
+
+.button-text {
+  margin: 0px 4px;
+  line-height: 100%;
+  display: block;
+  font-weight: 600;
+}

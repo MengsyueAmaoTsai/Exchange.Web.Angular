@@ -6,4 +6,20 @@ import { Component } from "@angular/core";
 	styleUrls: ["./order-entry.component.scss"],
 	standalone: true,
 })
-export class OrderEntryComponent {}
+export class OrderEntryComponent {
+	public buy() {}
+
+	public sell() {}
+
+	public withOrderType(orderType: string) {}
+	public withTimeInForce(timeInForce: string) {}
+	public withLimitPrice(limitPrice: number) {}
+
+	private placeOrder(
+		symbol: string,
+		tradeType: string,
+		quantity: number,
+		orderType: string,
+		timeInForce: string,
+	) {}
+}
