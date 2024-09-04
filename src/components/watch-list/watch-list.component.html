@@ -1,0 +1,25 @@
+<div class="watch-list-root">
+  <table>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Description</th>
+        <th>Last</th>
+        <th>Net change</th>
+        <th>Net change %</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (item of currentWatchList.items; track item) {
+        <tr>
+          <td>{{ item.symbol }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.last }}</td>
+          <td>{{ item.netChange }}</td>
+          <td>{{ item.netChangePercent }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
