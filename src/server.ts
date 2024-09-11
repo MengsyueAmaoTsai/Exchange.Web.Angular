@@ -4,8 +4,8 @@ import { APP_BASE_HREF } from "@angular/common";
 import { CommonEngine } from "@angular/ssr";
 import express from "express";
 import bootstrap from "./main.server";
+import { RequestDebuggingMiddleware } from "./middlewares";
 
-// The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
 	const server = express();
 	const serverDistFolder = dirname(fileURLToPath(import.meta.url));
@@ -17,7 +17,9 @@ export function app(): express.Express {
 	server.set("view engine", "html");
 	server.set("views", browserDistFolder); // Example Express Rest API endpoints
 	// server.get('/api/**', (req, res) => { });
-	// Serve static files from /browser
+
+	server.use(new RequestDebuggingMiddleware().invoke);
+
 	// (useStaticFiles)
 	server.get(
 		"**",
@@ -51,8 +53,9 @@ function run(): void {
 
 	// Start up the Node server
 	const server = app();
+
 	server.listen(port, () => {
-		console.log(`Node Express server listening on http://localhost:${port}`);
+		console.log(`Now listening on http://localhost:${port}`);
 	});
 }
 
