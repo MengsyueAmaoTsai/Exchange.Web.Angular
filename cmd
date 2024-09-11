@@ -14,7 +14,7 @@ case $1 in
         docker pull msat7201/$IMAGE_NAME:$TAG
         ;;
     start)
-        docker run -d -it -p \$SERVICE_PORT:$CONTAINER_PORT --restart=always --name $SERVICE_NAME msat7201/$IMAGE_NAME:$TAG
+        docker run -d -it -p $SERVICE_PORT:$CONTAINER_PORT --restart=always --name $SERVICE_NAME msat7201/$IMAGE_NAME:$TAG
         ;;
     stop)
         docker stop $SERVICE_NAME && docker rm $SERVICE_NAME || true
