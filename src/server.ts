@@ -15,11 +15,10 @@ export function app(): express.Express {
 	const commonEngine = new CommonEngine();
 
 	server.set("view engine", "html");
-	server.set("views", browserDistFolder);
-
-	// Example Express Rest API endpoints
+	server.set("views", browserDistFolder); // Example Express Rest API endpoints
 	// server.get('/api/**', (req, res) => { });
 	// Serve static files from /browser
+	// (useStaticFiles)
 	server.get(
 		"**",
 		express.static(browserDistFolder, {
@@ -28,7 +27,7 @@ export function app(): express.Express {
 		}),
 	);
 
-	// All regular routes use the Angular engine
+	// All regular routes use the Angular engine (mapAngularPages)
 	server.get("**", (req, res, next) => {
 		const { protocol, originalUrl, baseUrl, headers } = req;
 
