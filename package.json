@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test --code-coverage --no-watch",
     "dev": "ng serve --port 9996 --open",
-    "start": "node dist/exchange/server/server.mjs"
+    "dev:ssr": "pnpm run build --configuration development && node ./dist/server/server.mjs",
+    "start": "node ./dist/server/server.mjs"
   },
   "private": true,
   "dependencies": {

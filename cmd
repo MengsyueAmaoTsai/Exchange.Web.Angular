@@ -4,7 +4,7 @@ SERVICE_NAME=exchange-web
 IMAGE_NAME=exchange-web
 TAG=latest
 SERVICE_PORT=9996
-CONTAINER_PORT=4000
+CONTAINER_PORT=9996
 
 case $1 in
     build)

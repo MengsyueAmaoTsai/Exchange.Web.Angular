@@ -24,5 +24,5 @@ RUN npm i -g pnpm && \
 
 ENV NODE_ENV=production
 
-EXPOSE 4000
+EXPOSE 9996
 CMD ["node", "./server/server.mjs"]
