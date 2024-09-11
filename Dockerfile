@@ -23,6 +23,7 @@ RUN npm i -g pnpm && \
     pnpm i --prod
 
 ENV NODE_ENV=production
-
+ENV NODE_PORT=9996
 EXPOSE 9996
+
 CMD ["node", "./server/server.mjs"]
