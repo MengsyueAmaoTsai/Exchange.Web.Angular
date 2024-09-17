@@ -1,1 +1,1 @@
-export interface IResourceService {}
+export { ICurrentUser, IResourceService } from "./abstractions";
