@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Component, inject } from "@angular/core";
 
 @Component({
 	selector: "order-entry",
@@ -7,19 +8,13 @@ import { Component } from "@angular/core";
 	standalone: true,
 })
 export class OrderEntryComponent {
-	public buy() {}
+	// private readonly httpClient = inject(HttpClient);
 
-	public sell() {}
+	public buy() {
+		console.log("Buy");
+	}
 
-	public withOrderType(orderType: string) {}
-	public withTimeInForce(timeInForce: string) {}
-	public withLimitPrice(limitPrice: number) {}
-
-	private placeOrder(
-		symbol: string,
-		tradeType: string,
-		quantity: number,
-		orderType: string,
-		timeInForce: string,
-	) {}
+	public sell() {
+		console.log("Sell");
+	}
 }
