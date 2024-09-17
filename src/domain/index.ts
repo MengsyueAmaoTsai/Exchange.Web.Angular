@@ -1,1 +1,1 @@
-export { TradeType, OrderType, TimeInForce, OrderStatus } from "./enumerations";
+export interface IResourceService {}
