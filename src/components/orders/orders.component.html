@@ -1,2 +1,33 @@
-<div class="orders-root">
+<div class="orders-root" style="color: white;">
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Account Id</th>
+        <th>Symbol</th>
+        <th>Trade Type</th>
+        <th>Type</th>
+        <th>Time In Force</th>
+        <th>Quantity</th>
+        <th>Created Time</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (order of orders; track order) {
+        <tr>
+          <td>{{order.id}}</td>
+          <td>{{order.accountId}}</td>
+          <td>{{order.symbol}}</td>
+          <td>{{order.tradeType}}</td>
+          <td>{{order.type}}</td>
+          <td>{{order.timeInForce}}</td>
+          <td>{{order.quantity}}</td>
+          <td>{{order.createdTimeUtc}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
 </div>
+
+
