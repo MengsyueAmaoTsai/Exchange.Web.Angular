@@ -21,6 +21,8 @@ export type OrderResponse = {
 	type: string;
 	timeInForce: string;
 	quantity: number;
+	remainingQuantity: number;
+	executedQuantity: number;
 	createdTimeUtc: Date;
 };
 
