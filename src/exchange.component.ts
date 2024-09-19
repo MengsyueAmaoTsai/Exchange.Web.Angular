@@ -27,19 +27,21 @@ import { SvgProviderComponent } from "./svg-provider.component";
 	],
 })
 export class ExchangeComponent implements OnInit {
-	public logger = inject(
+	private readonly logger = inject(
 		"ILogger<ExchangeComponent>" as unknown as InjectionToken<
 			ILogger<ExchangeComponent>
 		>,
 	);
 
-	public platformId = inject(PLATFORM_ID);
+	private readonly platformId = inject(PLATFORM_ID);
 
 	public ngOnInit(): void {
-		this.logger.logDebug("ExchangeComponent initialized");
+		this.logger.logInformation("ExchangeComponent initialized");
 
 		if (isPlatformServer(this.platformId)) {
-			this.logger.logWarning("[Exchange:OnInit:Server] Running on the server");
+			this.logger.logInformation(
+				"[Exchange:OnInit:Server] Running on the server",
+			);
 		} else {
 			this.logger.logInformation(
 				"[Exchange:OnInit:Client] Running on the client",
