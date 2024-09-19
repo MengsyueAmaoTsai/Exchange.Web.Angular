@@ -2,6 +2,7 @@ import type { Routes } from "@angular/router";
 import { AboutComponent } from "./pages/about/about.component";
 import { DefaultComponent } from "./pages/default/default.component";
 import { DevComponent } from "./pages/dev/dev.component";
+import { NotFoundComponent } from "./pages/errors/not-found/not-found.component";
 
 export const routes: Routes = [
 	{
@@ -21,7 +22,7 @@ export const routes: Routes = [
 	},
 	{
 		path: "**",
-		redirectTo: "/",
+		component: NotFoundComponent,
 		pathMatch: "full",
 	},
 ];
