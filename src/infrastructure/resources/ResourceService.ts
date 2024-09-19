@@ -11,6 +11,7 @@ import type {
 	OrderResponse,
 	PositionResponse,
 	TradeResponse,
+	WatchListResponse,
 } from "./contracts";
 
 @Injectable({
@@ -22,6 +23,7 @@ export class ResourceService implements IResourceService {
 	public httpClient = inject(HttpClient);
 
 	public instruments: InstrumentResponse[] = [];
+	public watchLists: WatchListResponse[] = [];
 	public accounts: AccountResponse[] = [];
 	public orders: OrderResponse[] = [];
 	public executions: ExecutionResponse[] = [];
@@ -38,6 +40,18 @@ export class ResourceService implements IResourceService {
 			});
 
 		return this.instruments;
+	}
+
+	public listWatchLists(): WatchListResponse[] {
+		this.httpClient
+			.get<WatchListResponse[]>(
+				`${ResourceService.BaseAddress}/api/v1/watch-lists`,
+			)
+			.subscribe((watchLists) => {
+				this.watchLists = watchLists;
+			});
+
+		return this.watchLists;
 	}
 
 	public listAccounts(): AccountResponse[] {

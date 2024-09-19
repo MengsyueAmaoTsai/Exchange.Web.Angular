@@ -16,6 +16,7 @@ import type {
 	OrderResponse,
 	PositionResponse,
 	TradeResponse,
+	WatchListResponse,
 } from "../../infrastructure/resources/contracts";
 
 @Component({
@@ -53,6 +54,7 @@ export class DefaultComponent implements OnInit {
 	);
 
 	public instruments: InstrumentResponse[] = [];
+	public watchLists: WatchListResponse[] = [];
 	public accounts: AccountResponse[] = [];
 	public orders: OrderResponse[] = [];
 	public executions: ExecutionResponse[] = [];
@@ -61,6 +63,7 @@ export class DefaultComponent implements OnInit {
 
 	public ngOnInit(): void {
 		this.instruments = this.resourceService.listInstruments();
+    this.watchLists = this.resourceService.listWatchLists();
 		this.accounts = this.resourceService.listAccounts();
 		this.orders = this.resourceService.listOrders();
 		this.executions = this.resourceService.listExecutions();

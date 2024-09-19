@@ -8,6 +8,12 @@ export type InstrumentResponse = {
 	type: string;
 };
 
+export type WatchListResponse = {
+	id: string;
+	userId: string;
+	name: string;
+};
+
 export type AccountResponse = {
 	id: string;
 	userId: string;
