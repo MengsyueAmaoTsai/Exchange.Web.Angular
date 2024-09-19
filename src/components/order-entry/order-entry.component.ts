@@ -28,37 +28,27 @@ export class OrderEntryComponent implements OnInit {
 	}
 
 	public buy() {
-		this.createOrder("000-8283782", "NASDAQ:MSFT", "Buy", "Market", "IOC", 1);
+		this.placeOrder(TradeType.Buy);
 	}
 
 	public sell() {
-		this.createOrder("000-8283782", "NASDAQ:MSFT", "Sell", "Market", "IOC", 1);
+		this.placeOrder(TradeType.Sell);
+	}
 
-		this.resourceService.createOrder({
+	private placeOrder(tradeType: TradeType) {
+		const request = {
 			accountId: this.accountId,
 			symbol: this.symbol,
-			tradeType: TradeType.Sell,
+			tradeType,
 			orderType: this.orderType,
 			timeInForce: this.timeInForce,
 			quantity: this.quantity,
-		});
-	}
+		};
 
-	private createOrder(
-		accountId: string,
-		symbol: string,
-		tradeType: string,
-		orderType: string,
-		timeInForce: string,
-		quantity: number,
-	) {
-		this.resourceService.createOrder({
-			accountId: accountId,
-			symbol: symbol,
-			tradeType: tradeType,
-			orderType: orderType,
-			timeInForce: timeInForce,
-			quantity: quantity,
-		});
+		console.log(
+			`Placing order ${request.tradeType} ${request.quantity} ${request.symbol} @ ${request.orderType} ${request.orderType} ${request.timeInForce}`,
+		);
+
+		this.resourceService.createOrder(request);
 	}
 }
