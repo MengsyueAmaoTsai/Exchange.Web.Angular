@@ -9,7 +9,7 @@ import type { IResourceService } from "../../infrastructure/resources";
 	standalone: true,
 })
 export class OrderEntryComponent {
-	public resourceService = inject(
+	private readonly resourceService = inject(
 		"IResourceService" as unknown as InjectionToken<IResourceService>,
 	);
 

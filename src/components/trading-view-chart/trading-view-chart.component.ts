@@ -9,6 +9,7 @@ import type {
 	ResolutionString,
 } from "../../assets/charting_library/charting_library";
 
+// biome-ignore lint/complexity/noStaticOnlyClass: <explanation>
 class TradingViewChartConstants {
 	public static readonly LibraryPath = "/assets/charting_library/";
 	public static readonly ChartStorageApiVersion = "1.1";
@@ -40,13 +41,6 @@ export class TradingViewChartComponent implements OnInit, OnDestroy {
 
 	private chartInstance: IChartingLibraryWidget | null = null;
 
-	public ngOnDestroy(): void {
-		if (this.chartInstance !== null) {
-			this.chartInstance.remove();
-			this.chartInstance = null;
-		}
-	}
-
 	public ngOnInit(): void {
 		if (isPlatformBrowser(this.platformId)) {
 			const chartOptions: ChartingLibraryWidgetOptions = {
@@ -58,8 +52,8 @@ export class TradingViewChartComponent implements OnInit, OnDestroy {
 				container: this.elementId,
 				library_path: TradingViewChartConstants.LibraryPath,
 				locale: this.getLanguageFromUrl(),
-				disabled_features: ["use_localstorage_for_settings"],
 				enabled_features: ["study_templates"],
+				disabled_features: ["use_localstorage_for_settings"],
 				charts_storage_url: TradingViewChartConstants.ChartStorageUrl,
 				charts_storage_api_version:
 					TradingViewChartConstants.ChartStorageApiVersion,
@@ -68,15 +62,17 @@ export class TradingViewChartComponent implements OnInit, OnDestroy {
 				fullscreen: false,
 				autosize: true,
 				theme: "dark",
-				overrides: {
-					"paneProperties.backgroundType": "solid",
-					"paneProperties.background": "#242424",
-					"paneProperties.vertGridProperties.color": "#242424",
-					"paneProperties.horzGridProperties.color": "#242424",
-				},
+				overrides: {},
 			};
 
 			this.chartInstance = this.createTradingViewChart(chartOptions);
+		}
+	}
+
+	public ngOnDestroy(): void {
+		if (this.chartInstance !== null) {
+			this.chartInstance.remove();
+			this.chartInstance = null;
 		}
 	}
 
