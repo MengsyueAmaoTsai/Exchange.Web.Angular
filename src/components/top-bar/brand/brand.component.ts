@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
 	selector: "brand",
@@ -7,5 +7,5 @@ import { Component } from "@angular/core";
 	standalone: true,
 })
 export class BrandComponent {
-	public applicationName = "Richill Capital Exchange";
+	@Input() public text = "";
 }

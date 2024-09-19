@@ -10,4 +10,6 @@ import { SystemClockComponent } from "./system-clock/system-clock.component";
 	standalone: true,
 	imports: [BrandComponent, SystemClockComponent, CurrentUserComponent],
 })
-export class TopBarComponent {}
+export class TopBarComponent {
+	public applicationName = "Richill Capital Exchange";
+}
