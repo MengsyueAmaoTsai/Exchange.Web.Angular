@@ -25,9 +25,9 @@ export class ExchangeComponent implements OnInit {
 		console.log("ExchangeComponent initialized");
 
 		if (isPlatformServer(this.platformId)) {
-			console.log("[ExchangeComponent:OnInit] Running on the server");
+			console.log("[Exchange:OnInit:Server] Running on the server");
 		} else {
-			console.log("[Running on the cl:OnInit] Running on the client");
+			console.log("[Exchange:OnInit:Client] Running on the client");
 		}
 	}
 }
