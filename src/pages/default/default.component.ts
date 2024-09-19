@@ -1,5 +1,4 @@
-import { isPlatformServer } from "@angular/common";
-import { Component, PLATFORM_ID, inject } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import type { InjectionToken, OnInit } from "@angular/core";
 import { ExecutionsComponent } from "../../components/executions/executions.component";
 import { OrderEntryComponent } from "../../components/order-entry/order-entry.component";
@@ -10,6 +9,14 @@ import { DefaultLogger } from "../../infrastructure/logging";
 import type { ILogger } from "../../infrastructure/logging";
 import type { IResourceService } from "../../infrastructure/resources";
 import { ResourceService } from "../../infrastructure/resources";
+import type {
+	AccountResponse,
+	ExecutionResponse,
+	InstrumentResponse,
+	OrderResponse,
+	PositionResponse,
+	TradeResponse,
+} from "../../infrastructure/resources/contracts";
 
 @Component({
 	selector: "default",
@@ -45,20 +52,21 @@ export class DefaultComponent implements OnInit {
 		"IResourceService" as unknown as InjectionToken<IResourceService>,
 	);
 
-	private readonly platformId = inject(PLATFORM_ID);
+	public instruments: InstrumentResponse[] = [];
+	public accounts: AccountResponse[] = [];
+	public orders: OrderResponse[] = [];
+	public executions: ExecutionResponse[] = [];
+	public positions: PositionResponse[] = [];
+	public trades: TradeResponse[] = [];
 
 	public ngOnInit(): void {
-		this.logger.logInformation("Default terminal initialized");
+		this.instruments = this.resourceService.listInstruments();
+		this.accounts = this.resourceService.listAccounts();
+		this.orders = this.resourceService.listOrders();
+		this.executions = this.resourceService.listExecutions();
+		this.positions = this.resourceService.listPositions();
+		this.trades = this.resourceService.listTrades();
 
-		if (isPlatformServer(this.platformId)) {
-			this.logger.logInformation(
-				"[Default:OnInit:Server] Running on the server",
-			);
-			this.resourceService.listOrders();
-		} else {
-			this.logger.logInformation(
-				"[Default:OnInit:Client] Running on the client",
-			);
-		}
+		this.logger.logInformation("Default terminal initialized");
 	}
 }

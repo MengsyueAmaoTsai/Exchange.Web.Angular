@@ -3,6 +3,7 @@ import { Injectable, inject } from "@angular/core";
 import { environment } from "../../environments/environment";
 import type { IResourceService } from "./IResourceService";
 import type {
+	AccountResponse,
 	CreateOrderRequest,
 	ExecutionResponse,
 	InstrumentResponse,
@@ -21,6 +22,7 @@ export class ResourceService implements IResourceService {
 	public httpClient = inject(HttpClient);
 
 	public instruments: InstrumentResponse[] = [];
+	public accounts: AccountResponse[] = [];
 	public orders: OrderResponse[] = [];
 	public executions: ExecutionResponse[] = [];
 	public positions: PositionResponse[] = [];
@@ -36,6 +38,16 @@ export class ResourceService implements IResourceService {
 			});
 
 		return this.instruments;
+	}
+
+	public listAccounts(): AccountResponse[] {
+		this.httpClient
+			.get<AccountResponse[]>(`${ResourceService.BaseAddress}/api/v1/accounts`)
+			.subscribe((accounts) => {
+				this.accounts = accounts;
+			});
+
+		return this.accounts;
 	}
 
 	public listOrders(): OrderResponse[] {

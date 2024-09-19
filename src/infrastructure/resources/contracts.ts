@@ -8,6 +8,14 @@ export type InstrumentResponse = {
 	type: string;
 };
 
+export type AccountResponse = {
+	id: string;
+	userId: string;
+	alias: string;
+	currency: string;
+	createdTimeUtc: Date;
+};
+
 export type OrderResponse = {
 	id: string;
 	accountId: string;
