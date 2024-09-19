@@ -1,6 +1,4 @@
-import { HttpClient } from "@angular/common/http";
-import type { OnDestroy, OnInit } from "@angular/core";
-import { Component, inject } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 type OrderResponse = {
 	id: string;
@@ -18,18 +16,7 @@ type OrderResponse = {
 	styleUrls: ["./orders.component.scss"],
 	standalone: true,
 })
-export class OrdersComponent implements OnInit, OnDestroy {
-	private readonly httpClient = inject(HttpClient);
-
+export class OrdersComponent {
+	@Input()
 	public orders: OrderResponse[] = [];
-
-	public ngOnDestroy(): void {}
-
-	public ngOnInit(): void {
-		this.httpClient
-			.get<OrderResponse[]>("https://localhost:10000/api/v1/orders")
-			.subscribe((orders) => {
-				this.orders = orders;
-			});
-	}
 }
