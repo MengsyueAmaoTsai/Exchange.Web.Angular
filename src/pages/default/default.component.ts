@@ -6,8 +6,8 @@ import { OrderEntryComponent } from "../../components/order-entry/order-entry.co
 import { OrdersComponent } from "../../components/orders/orders.component";
 import { TradingViewChartComponent } from "../../components/trading-view-chart/trading-view-chart.component";
 import { WatchListComponent } from "../../components/watch-list/watch-list.component";
-import type { IResourceService } from "../../resources";
-import { ResourceService } from "../../resources";
+import type { IResourceService } from "../../infrastructure/resources";
+import { ResourceService } from "../../infrastructure/resources";
 
 @Component({
 	selector: "default",
