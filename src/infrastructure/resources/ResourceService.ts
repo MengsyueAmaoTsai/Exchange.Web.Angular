@@ -111,6 +111,12 @@ export class ResourceService implements IResourceService {
 	public createOrder(request: CreateOrderRequest): string {
 		let orderId = "";
 
+		const symbols = this.instruments.map((ins) => ins.symbol);
+
+		if (!symbols.includes(request.symbol)) {
+			throw new Error(`Symbol ${request.symbol} not found`);
+		}
+
 		this.httpClient
 			.post<OrderCreatedResponse>(
 				`${ResourceService.BaseAddress}/api/v1/orders`,
