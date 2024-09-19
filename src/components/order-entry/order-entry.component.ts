@@ -1,4 +1,6 @@
 import { Component, inject } from "@angular/core";
+import type { InjectionToken } from "@angular/core";
+import type { IResourceService } from "../../infrastructure/resources";
 
 @Component({
 	selector: "order-entry",
@@ -7,27 +9,33 @@ import { Component, inject } from "@angular/core";
 	standalone: true,
 })
 export class OrderEntryComponent {
+	public resourceService = inject(
+		"IResourceService" as unknown as InjectionToken<IResourceService>,
+	);
+
 	public buy() {
-		this.createOrder({
-			accountId: "1",
-			symbol: "AAPL",
-			tradeType: "Buy",
-			orderType: "Market",
-			timeInForce: "FOK",
-			quantity: 1,
-		});
+		this.createOrder("000-8283782", "NASDAQ:MSFT", "Buy", "Market", "IOC", 1);
 	}
 
 	public sell() {
-		this.createOrder({
-			accountId: "1",
-			symbol: "AAPL",
-			tradeType: "Sell",
-			orderType: "Market",
-			timeInForce: "FOK",
-			quantity: 1,
-		});
+		this.createOrder("000-8283782", "NASDAQ:MSFT", "Sell", "Market", "IOC", 1);
 	}
 
-	private createOrder(createOrderRequest: {}) {}
+	private createOrder(
+		accountId: string,
+		symbol: string,
+		tradeType: string,
+		orderType: string,
+		timeInForce: string,
+		quantity: number,
+	) {
+		this.resourceService.createOrder({
+			accountId: accountId,
+			symbol: symbol,
+			tradeType: tradeType,
+			orderType: orderType,
+			timeInForce: timeInForce,
+			quantity: quantity,
+		});
+	}
 }

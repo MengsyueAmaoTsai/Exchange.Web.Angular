@@ -91,6 +91,11 @@ export class ResourceService implements IResourceService {
 			.post<OrderCreatedResponse>(
 				`${ResourceService.BaseAddress}/api/v1/orders`,
 				request,
+				{
+					headers: {
+						"Content-Type": "application/json",
+					},
+				},
 			)
 			.subscribe((created) => {
 				console.log("order created", created);

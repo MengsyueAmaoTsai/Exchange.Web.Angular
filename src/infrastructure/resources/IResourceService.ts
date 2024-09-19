@@ -1,4 +1,5 @@
 import type {
+	CreateOrderRequest,
 	ExecutionResponse,
 	InstrumentResponse,
 	OrderResponse,
@@ -7,6 +8,7 @@ import type {
 } from "./contracts";
 
 export interface IResourceService {
+	createOrder(request: CreateOrderRequest): string;
 	listInstruments(): InstrumentResponse[];
 	listOrders(): OrderResponse[];
 	listExecutions(): ExecutionResponse[];

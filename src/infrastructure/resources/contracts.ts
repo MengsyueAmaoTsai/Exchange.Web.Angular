@@ -29,7 +29,6 @@ export type CreateOrderRequest = {
 	orderType: string;
 	timeInForce: string;
 	quantity: number;
-	price: number;
 };
 
 export type OrderCreatedResponse = CreatedResponse;
