@@ -6,7 +6,7 @@ export interface ILogger<T> {
 }
 
 export class DefaultLogger<T> implements ILogger<T> {
-	public constructor(private readonly typeT: new (...args: any[]) => T) {}
+	public constructor(private readonly typeT: new (...args: object[]) => T) {}
 
 	public logError(message: string): void {
 		this.log("ERR", message, console.error);
