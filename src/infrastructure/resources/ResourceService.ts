@@ -45,8 +45,6 @@ export class ResourceService implements IResourceService {
 				this.orders = orders;
 			});
 
-		console.log("url", ResourceService.BaseAddress);
-
 		return this.orders;
 	}
 
