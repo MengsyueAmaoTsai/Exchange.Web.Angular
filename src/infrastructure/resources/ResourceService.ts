@@ -3,8 +3,10 @@ import { Injectable, inject } from "@angular/core";
 import { environment } from "../../environments/environment";
 import type { IResourceService } from "./IResourceService";
 import type {
+	CreateOrderRequest,
 	ExecutionResponse,
 	InstrumentResponse,
+	OrderCreatedResponse,
 	OrderResponse,
 	PositionResponse,
 	TradeResponse,
@@ -80,5 +82,21 @@ export class ResourceService implements IResourceService {
 			});
 
 		return this.trades;
+	}
+
+	public createOrder(request: CreateOrderRequest): string {
+		let orderId = "";
+
+		this.httpClient
+			.post<OrderCreatedResponse>(
+				`${ResourceService.BaseAddress}/api/v1/orders`,
+				request,
+			)
+			.subscribe((created) => {
+				console.log("order created", created);
+				orderId = created.id;
+			});
+
+		return orderId;
 	}
 }

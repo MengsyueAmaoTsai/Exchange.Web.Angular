@@ -1,3 +1,7 @@
+export type CreatedResponse = {
+	id: string;
+};
+
 export type InstrumentResponse = {
 	symbol: string;
 	description: string;
@@ -17,6 +21,18 @@ export type OrderResponse = {
 	status: string;
 	createdTimeUtc: Date;
 };
+
+export type CreateOrderRequest = {
+	accountId: string;
+	symbol: string;
+	tradeType: string;
+	orderType: string;
+	timeInForce: string;
+	quantity: number;
+	price: number;
+};
+
+export type OrderCreatedResponse = CreatedResponse;
 
 export type ExecutionResponse = {
 	id: string;
