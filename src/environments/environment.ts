@@ -1,7 +1,7 @@
 export const environment = {
 	production: true,
 	origin: "https://exchange.richillcapital.com",
-	api: {
+	resources: {
 		baseAddress: "https://api.richillcapital.com",
 	},
 };

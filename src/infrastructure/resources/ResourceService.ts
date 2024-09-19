@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable, inject } from "@angular/core";
+import { environment } from "../../environments/environment";
 import type { IResourceService } from "./IResourceService";
 import type {
 	ExecutionResponse,
@@ -13,7 +14,7 @@ import type {
 	providedIn: "root",
 })
 export class ResourceService implements IResourceService {
-	private static readonly BaseAddress = "https://localhost:10000";
+	private static readonly BaseAddress = environment.resources.baseAddress;
 
 	public httpClient = inject(HttpClient);
 
@@ -41,6 +42,8 @@ export class ResourceService implements IResourceService {
 			.subscribe((orders) => {
 				this.orders = orders;
 			});
+
+		console.log("url", ResourceService.BaseAddress);
 
 		return this.orders;
 	}
