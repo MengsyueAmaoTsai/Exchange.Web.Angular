@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import type { ExecutionResponse } from "../../infrastructure/resources/contracts";
 
 @Component({
 	selector: "executions",
@@ -7,5 +8,5 @@ import { Component } from "@angular/core";
 	standalone: true,
 })
 export class ExecutionsComponent {
-	executions = [];
+	@Input() executions: ExecutionResponse[] = [];
 }

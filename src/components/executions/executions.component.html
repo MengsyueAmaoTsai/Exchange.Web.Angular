@@ -1,18 +1,35 @@
-<div class="executions-root">
+<div class="executions-root" style="color: white;">
 
   <table>
     <thead>
       <tr>
-        <th>Time</th>
-        <th>Trade type</th>
+        <th>Id</th>
+        <th>Account Id</th>
         <th>Symbol</th>
+        <th>Trade Type</th>
+        <th>Order Type</th>
+        <th>Time In Force</th>
         <th>Quantity</th>
-        <th>Price</th>
+        <th>Commission</th>
+        <th>Tax</th>
+        <th>Created Time</th>
       </tr>
     </thead>
 
     <tbody>
       @for (execution of executions; track execution) {
+        <tr>
+          <td>{{ execution.id }}</td>
+          <td>{{ execution.accountId }}</td>
+          <td>{{ execution.symbol }}</td>
+          <td>{{ execution.tradeType }}</td>
+          <td>{{ execution.orderType }}</td>
+          <td>{{ execution.timeInForce }}</td>
+          <td>{{ execution.quantity }}</td>
+          <td>{{ execution.commission }}</td>
+          <td>{{ execution.tax }}</td>
+          <td>{{ execution.createdTimeUtc }}</td>
+        </tr>
       }
     </tbody>
   </table>

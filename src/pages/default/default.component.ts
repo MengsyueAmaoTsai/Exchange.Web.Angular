@@ -3,6 +3,8 @@ import type { InjectionToken, OnInit } from "@angular/core";
 import { ExecutionsComponent } from "../../components/executions/executions.component";
 import { OrderEntryComponent } from "../../components/order-entry/order-entry.component";
 import { OrdersComponent } from "../../components/orders/orders.component";
+import { PositionsComponent } from "../../components/positions/positions.component";
+import { TradesComponent } from "../../components/trades/trades.component";
 import { TradingViewChartComponent } from "../../components/trading-view-chart/trading-view-chart.component";
 import { WatchListComponent } from "../../components/watch-list/watch-list.component";
 import { DefaultLogger } from "../../infrastructure/logging";
@@ -28,8 +30,10 @@ import type {
 		TradingViewChartComponent,
 		WatchListComponent,
 		OrderEntryComponent,
-		ExecutionsComponent,
 		OrdersComponent,
+		ExecutionsComponent,
+		PositionsComponent,
+		TradesComponent,
 	],
 	providers: [
 		{
@@ -63,7 +67,7 @@ export class DefaultComponent implements OnInit {
 
 	public ngOnInit(): void {
 		this.instruments = this.resourceService.listInstruments();
-    this.watchLists = this.resourceService.listWatchLists();
+		this.watchLists = this.resourceService.listWatchLists();
 		this.accounts = this.resourceService.listAccounts();
 		this.orders = this.resourceService.listOrders();
 		this.executions = this.resourceService.listExecutions();

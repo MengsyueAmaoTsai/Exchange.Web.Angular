@@ -1,0 +1,39 @@
+<div class="trades-root" style="color: white;">
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Account Id</th>
+        <th>Symbol</th>
+        <th>Side</th>
+        <th>Quantity</th>
+        <th>Entry price</th>
+        <th>Entry time</th>
+        <th>Exit price</th>
+        <th>Exit time</th>
+        <th>Commission</th>
+        <th>Tax</th>
+        <th>Swap</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (trade of trades; track trade) {
+        <tr>
+          <td>{{ trade.id }}</td>
+          <td>{{ trade.accountId }}</td>
+          <td>{{ trade.symbol }}</td>
+          <td>{{ trade.side }}</td>
+          <td>{{ trade.quantity }}</td>
+          <td>{{ trade.entryPrice }}</td>
+          <td>{{ trade.entryTimeUtc }}</td>
+          <td>{{ trade.exitPrice }}</td>
+          <td>{{ trade.exitTimeUtc }}</td>
+          <td>{{ trade.commission }}</td>
+          <td>{{ trade.tax }}</td>
+          <td>{{ trade.swap }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

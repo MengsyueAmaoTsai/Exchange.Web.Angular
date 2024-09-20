@@ -1,2 +1,37 @@
-<div class="positions-root">
+<div class="positions-root" style="color: white;">
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Account Id</th>
+        <th>Symbol</th>
+        <th>Side</th>
+        <th>Quantity</th>
+        <th>Average price</th>
+        <th>Commission</th>
+        <th>Tax</th>
+        <th>Swap</th>
+        <th>Status</th>
+        <th>Created time</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (position of positions; track position) {
+        <tr>
+          <td>{{ position.id }}</td>
+          <td>{{ position.accountId }}</td>
+          <td>{{ position.symbol }}</td>
+          <td>{{ position.side }}</td>
+          <td>{{ position.quantity }}</td>
+          <td>{{ position.averagePrice }}</td>
+          <td>{{ position.commission }}</td>
+          <td>{{ position.tax }}</td>
+          <td>{{ position.swap }}</td>
+          <td>{{ position.status }}</td>
+          <td>{{ position.createdTimeUtc }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
 </div>

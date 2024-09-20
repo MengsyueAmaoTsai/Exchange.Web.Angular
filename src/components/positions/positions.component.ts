@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import type { PositionResponse } from "../../infrastructure/resources/contracts";
 
 @Component({
 	selector: "positions",
@@ -7,5 +8,5 @@ import { Component } from "@angular/core";
 	standalone: true,
 })
 export class PositionsComponent {
-	positions = [];
+	@Input() public positions: PositionResponse[] = [];
 }
