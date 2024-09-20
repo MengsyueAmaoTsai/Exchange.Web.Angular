@@ -8,6 +8,7 @@ import type {
 	ExecutionResponse,
 	InstrumentResponse,
 	OrderCreatedResponse,
+	OrderDetailsResponse,
 	OrderResponse,
 	PositionResponse,
 	TradeResponse,

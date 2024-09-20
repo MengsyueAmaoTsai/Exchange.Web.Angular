@@ -3,6 +3,7 @@ import type {
 	CreateOrderRequest,
 	ExecutionResponse,
 	InstrumentResponse,
+	OrderDetailsResponse,
 	OrderResponse,
 	PositionResponse,
 	TradeResponse,

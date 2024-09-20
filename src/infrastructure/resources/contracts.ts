@@ -1,3 +1,11 @@
+export type ErrorResponse = {
+	type: string;
+	title: string;
+	status: number;
+	detail: string;
+	traceId: string;
+};
+
 export type CreatedResponse = {
 	id: string;
 };
@@ -13,6 +21,8 @@ export type WatchListResponse = {
 	userId: string;
 	name: string;
 };
+
+export type WatchListDetailsResponse = WatchListResponse;
 
 export type AccountResponse = {
 	id: string;
@@ -35,6 +45,8 @@ export type OrderResponse = {
 	status: string;
 	createdTimeUtc: Date;
 };
+
+export type OrderDetailsResponse = OrderResponse;
 
 export type CreateOrderRequest = {
 	accountId: string;
@@ -61,6 +73,8 @@ export type ExecutionResponse = {
 	tax: number;
 	createdTimeUtc: Date;
 };
+
+export type ExecutionDetailsResponse = ExecutionResponse;
 
 export type PositionResponse = {
 	id: string;

@@ -7,8 +7,6 @@ import { PositionsComponent } from "../../components/positions/positions.compone
 import { TradesComponent } from "../../components/trades/trades.component";
 import { TradingViewChartComponent } from "../../components/trading-view-chart/trading-view-chart.component";
 import { WatchListComponent } from "../../components/watch-list/watch-list.component";
-import { DefaultLogger } from "../../infrastructure/logging";
-import type { ILogger } from "../../infrastructure/logging";
 import type { IResourceService } from "../../infrastructure/resources";
 import { ResourceService } from "../../infrastructure/resources";
 import type {
@@ -37,22 +35,12 @@ import type {
 	],
 	providers: [
 		{
-			provide: "ILogger<DefaultComponent>",
-			useFactory: () => new DefaultLogger<DefaultComponent>(DefaultComponent),
-		},
-		{
 			provide: "IResourceService",
 			useClass: ResourceService,
 		},
 	],
 })
 export class DefaultComponent implements OnInit {
-	private readonly logger = inject(
-		"ILogger<DefaultComponent>" as unknown as InjectionToken<
-			ILogger<DefaultComponent>
-		>,
-	);
-
 	private readonly resourceService = inject(
 		"IResourceService" as unknown as InjectionToken<IResourceService>,
 	);
@@ -74,6 +62,6 @@ export class DefaultComponent implements OnInit {
 		this.positions = this.resourceService.listPositions();
 		this.trades = this.resourceService.listTrades();
 
-		this.logger.logInformation("Default terminal initialized");
+		console.log("Default terminal initialized");
 	}
 }
